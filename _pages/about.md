@@ -33,11 +33,6 @@ News
 
 **May 22, 2024** - Selected and fully funded for the Summer 2024 NHERI Computational Academy at the Texas Advanced Computing Center (TACC), UT-Austin.
 
-**
-
-
-
-
 Contact
 ---------
 :email: taadebi2 'at' uh 'dot' edu
