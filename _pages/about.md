@@ -14,9 +14,9 @@ When I am not diving into research or developing mathematically sophisticated so
 
 News
 ======
-**April 25, 2025** — Landed in Singapore to present our paper on ("Optimizing Posterior Samples for Bayesian Optimization via Rootfinding")[https://iclr.cc/virtual/2025/poster/30191] at ICLR 2025!  
+**April 25, 2025** — Landed in Singapore to present our paper on ["Optimizing Posterior Samples for Bayesian Optimization via Rootfinding"](https://iclr.cc/virtual/2025/poster/30191) at ICLR 2025!  
 
-**Jan 22, 2025** — Our research on [Optimizing Posterior Samples for Bayesian Optimization via Rootfinding] (https://openreview.net/forum?id=I6UbnkUveF&referrer=%5Bthe%20profile%20of%20Taiwo%20Adebiyi%5D(%2Fprofile%3Fid%3D~Taiwo_Adebiyi1)) was accepted to ICLR 2025!
+**Jan 22, 2025** — Our research on [Optimizing Posterior Samples for Bayesian Optimization via Rootfinding](https://openreview.net/pdf?id=IpRLTVblaV) was accepted to ICLR 2025!
 
 **Nov 19, 2024** — Awarded the Jimmie A. Schindewolf Academic Scholarship for academic and research excellence at the University of Houston!
 
