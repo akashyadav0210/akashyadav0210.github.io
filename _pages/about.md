@@ -11,18 +11,37 @@ I am a PhD Candidate in [Uncertainty Quantification Group](https://uq.uh.edu/) a
 
 When I am not diving into research or developing mathematically sophisticated software, I enjoy giving back to my community, exploring the venture capital space, listening to diplomatic speeches, and catching a good game of football (the real kind), especially as a Barcelona and Messi fan.
 
+Education
+===========
+- PhD., University of Houston, May 2027*
+- PGCert. (Distinction), Nigerian University of Technology and Management, August 2022
+- BSc. (First Class Honors), University of Lagos, November 2021
 
 News
 ======
-**April 25, 2025** — Landed in Singapore to present our paper on ["Optimizing Posterior Samples for Bayesian Optimization via Rootfinding"](https://iclr.cc/virtual/2025/poster/30191) at ICLR 2025!  
+**Apr 25, 2025** - Landed in Singapore to present our paper on ["Optimizing Posterior Samples for Bayesian Optimization via Rootfinding"](https://iclr.cc/virtual/2025/poster/30191) at ICLR 2025!  
 
-**Jan 22, 2025** — Our research on [Optimizing Posterior Samples for Bayesian Optimization via Rootfinding](https://openreview.net/pdf?id=IpRLTVblaV) was accepted to ICLR 2025!
+**Jan 22, 2025** - Our research on [Optimizing Posterior Samples for Bayesian Optimization via Rootfinding](https://openreview.net/pdf?id=IpRLTVblaV) was accepted to ICLR 2025!
 
-**Nov 19, 2024** — Awarded the Jimmie A. Schindewolf Academic Scholarship for academic and research excellence at the University of Houston!
+**Nov 19, 2024** - Awarded the Jimmie A. Schindewolf Academic Scholarship for academic and research excellence at the University of Houston!
 
-**Oct 09, 2024** — Our research on [Gaussian Process Thompson Sampling via Rootfinding] was accepted for oral presentation at NeurIPS 2024 BDU Workshop!
+**Nov 12, 2024** - Honored to receive travel funding from Google Research to present at the NeurIPS 2024 BDU Workshop in Vancouver!
+
+**Oct 09, 2024** - Our research on [Gaussian Process Thompson Sampling via Rootfinding](openreview.net/pdf?id=IpRLTVblaV) was accepted for oral presentation at NeurIPS 2024 BDU Workshop!
+
+**Aug 1, 2024** - Our paper on [Digital Twins and Civil Engineering Phases: Reorienting Adoption Strategies](https://asmedigitalcollection.asme.org/computingengineering/article/24/10/100801/1202057/Digital-Twins-and-Civil-Engineering-Phases?searchresult=1) was accepted to ASME Journal of Computing and Information Science in Engineering!
+
+**May 22, 2024** - Selected and fully funded for the Summer 2024 NHERI Computational Academy at the Texas Advanced Computing Center (TACC), UT-Austin.
+
+**
 
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+
+
+Contact
+---------
+:email: taadebi2 'at' uh 'dot' edu
+
+For collaboration opportunities, project discussions, or professional inquires, feeel free to reach out via my mail. 
+
+You can also reach me via [LinkedIn](https://www.linkedin.com/in/taiwo-adebiyi-055750174/). Kindly note that response times may vary due to bandwidth limitations.

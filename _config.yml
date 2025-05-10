@@ -22,8 +22,8 @@ repository               : "TaiwoAdebiyi23.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/images/bio.jpeg"
-  name             : "Your Sidebar Name"
+  avatar           : "/images/bio.jpg"
+  name             : "Taiwo Adebiyi"
   pronouns         : # example: "she/her"  
   bio              : "PhD Candidate"
   location         : "Houston, TX"
@@ -89,7 +89,7 @@ publication_category:
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
-words_per_minute         : 160
+words_per_minute         : 200
 future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false      #change to true to add link to talkmap on talks page
