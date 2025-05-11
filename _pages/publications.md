@@ -37,7 +37,7 @@ toc_sticky: true
 
  <div class="publication">          
    <link rel="stylesheet" href="/assets/css/my.css">         
-   <div class="img"><a href="https://www-sciencedirect-com.ezproxy.lib.uh.edu/science/article/pii/S0022407324003674"><img class="img_responsive" src="/images/pub/thermal-emitters.png"></a></div>         
+   <div class="img"><a href="https://www-sciencedirect-com.ezproxy.lib.uh.edu/science/article/pii/S0022407324003674"><img class="img_responsive" src="/images/pub/thermal-emitters.jpg"></a></div>         
    <div class="text">         
      <div class="title"><a id="gpts" href="https://www-sciencedirect-com.ezproxy.lib.uh.edu/science/article/pii/S0022407324003674">Automated Design of Nonreciprocal Thermal Emitters via Bayesian Optimization</a></div>         
      <div class="authors">Bach Do, Sina Jafari Ghalekohneh, <strong>Taiwo A. Adebiyi</strong>, Bo Zhao, Ruda Zhang         
