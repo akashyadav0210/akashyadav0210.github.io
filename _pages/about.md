@@ -7,7 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD Candidate in [Uncertainty Quantification Group](https://uq.uh.edu/) at the University of Houston, advised by [Ruda Zhang](https://www.cive.uh.edu/faculty/zhang-ruda). My research is driven by a deep commitment to designing data-driven technologies for resilient system designs and engineering applications. My work focuses on optimization under uncertainty (Bayesian Optimization), probabilistic modeling (Gaussian Processes), and fully automated systems (Digital Twins), aligning with the industry's growing reliance on GPU-accelerated supercomputing, sensing technologies, and artificial intelligence for robust design and intelligent decision-making.
+Hello! I am a PhD Candidate in [Uncertainty Quantification Group](https://uq.uh.edu/) at the University of Houston, advised by [Ruda Zhang](https://www.cive.uh.edu/faculty/zhang-ruda). 
+
+My research is driven by a deep commitment to designing data-driven technologies for resilient system designs and engineering applications. My work focuses on optimization under uncertainty (Bayesian Optimization), probabilistic modeling (Gaussian Processes), and fully automated systems (Digital Twins), aligning with the industry's growing reliance on GPU-accelerated supercomputing, sensing technologies, and artificial intelligence for robust design and intelligent decision-making.
 
 When I am not diving into research or developing mathematically sophisticated software, I enjoy giving back to my community, exploring the venture capital space, listening to diplomatic speeches, and catching a good game of football (the real kind), especially as a Barcelona and Messi fan.
 
