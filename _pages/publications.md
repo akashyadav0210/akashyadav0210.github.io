@@ -10,7 +10,7 @@ redirect_from:
   - /publications/
   - /publications.html
 ---
----
+
 ## 2025
 
  <div class="publication">          
