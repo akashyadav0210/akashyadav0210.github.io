@@ -6,6 +6,10 @@ author_profile: true
 toc: true 
 toc_label: "Publication List" 
 toc_sticky: true 
+redirect_from: 
+  - /publications/
+  - /publications.html
+---
 ---
 ## 2025
 
