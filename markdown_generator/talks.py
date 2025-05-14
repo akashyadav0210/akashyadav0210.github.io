@@ -33,7 +33,7 @@ import os
 
 # In[3]:
 
-talks = pd.read_csv("talks.tsv", sep="\t", header=0)
+talks = pd.read_csv("c:/Users/taadebi2/Desktop/TaiwoAdebiyi23.github.io/markdown_generator/talks.tsv", sep="\t", header=0)
 talks
 
 
