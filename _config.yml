@@ -123,9 +123,12 @@ atom_feed:
   hide                   : false     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
-
+google:
+  search_engine_id       : 92bbb534a18db45c7 # YOUR_SEARCH_ENGINE_ID
+  instant_search         : true # false (default), true
+  
 # SEO Related
-google_site_verification :
+google_site_verification : l0hrJlNzyQs3rHCQr1
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
