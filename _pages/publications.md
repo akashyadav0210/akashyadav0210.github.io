@@ -12,23 +12,22 @@ toc_sticky: true
 
  <div class="publication">          
    <link rel="stylesheet" href="/assets/css/my.css">         
-   <div class="img"><a href="https://openreview.net/forum?id=I6UbnkUveF&referrer=%5Bthe%20profile%20of%20Taiwo%20Adebiyi%5D(%2Fprofile%3Fid%3D~Taiwo_Adebiyi1)"><img class="img_responsive" src="/images/pub/bo_iterations.gif"></a></div>         
+   <div class="img"><a href="https://arxiv.org/abs/2504.19963v2"><img class="img_responsive" src="/images/pub/bo_iterations.gif"></a></div>         
    <div class="text">         
-     <div class="title"><a id="tsroots" href="https://iclr.cc/virtual/2025/poster/30191">Stochastic Subspace via Probabilistic Principal Component Analysis for Characterizing Model Error</a></div>         
+     <div class="title"><a id="tsroots" href="https://arxiv.org/abs/2504.19963v2">Stochastic Subspace via Probabilistic Principal Component Analysis for Characterizing Model Error</a></div>         
      <div class="authors"><strong>Akash Yadav</strong>, Ruda Zhang         
      </div>         
      <div>         
        <em>arxiv, 2025</em> 
  <br> 
-
- <font color="red">Average rating: 7.0</font> (top 8% of total submissions) 
+      
  <br>
 
-       <a class="btn btn--primary btn--small" href="https://iclr.cc/virtual/2025/poster/30191">Project page</a>
+       <a class="btn btn--primary btn--small" href="https://github.com/UQUH/SS_PPCA">Project page</a>
 
-       <a class="btn btn--success btn--small" href="https://openreview.net/pdf?id=I6UbnkUveF">PDF</a>         
+       <a class="btn btn--success btn--small" href="https://arxiv.org/abs/2504.19963v2">PDF</a>         
           
-       <a class="btn btn--warning btn--small" href="https://github.com/UQUH/TSRoots">Code</a>        
+       <a class="btn btn--warning btn--small" href="https://github.com/UQUH/SS_PPCA">Code</a>        
          
      </div>         
    </div>         
