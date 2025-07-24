@@ -12,7 +12,7 @@ toc_sticky: true
 
  <div class="publication">          
    <link rel="stylesheet" href="/assets/css/my.css">         
-   <div class="img"><a href="https://arxiv.org/abs/2504.19963v2"><img class="img_responsive" src="/images/pub/bo_iterations.gif"></a></div>         
+   <div class="img"><a href="https://arxiv.org/abs/2504.19963v2"><img class="img_responsive" src="/images/pub/Prediction_disp.png"></a></div>         
    <div class="text">         
      <div class="title"><a id="tsroots" href="https://arxiv.org/abs/2504.19963v2">Stochastic Subspace via Probabilistic Principal Component Analysis for Characterizing Model Error</a></div>         
      <div class="authors"><strong>Akash Yadav</strong>, Ruda Zhang         
