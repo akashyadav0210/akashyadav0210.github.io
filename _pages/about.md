@@ -19,6 +19,8 @@ Education
 
 News
 ======
+**July 23, 2025** - Presented our work on *Stochastic reduced-order modeling for characterization and correction of model-error* at USNCCM 2025 in Chicago, IL.
+
 **Nov 19, 2024** - Awarded the Jimmie A. Schindewolf Academic Scholarship for academic and research excellence at the University of Houston!
 
 **Jul 21 2024** – Finalist, UQ-TTA Student Paper Competition, WCCM/PANACM 2024, Vancouver.
