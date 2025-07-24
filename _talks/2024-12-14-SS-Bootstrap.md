@@ -4,7 +4,7 @@ collection: talks
 type: "Poster"
 permalink: /talks/2024-12-14-SS-Bootstrap
 venue: "Conference on Applied AI & Scientific Machine Learning (CASML)"
-date: 2024-12-14
+date: 2024-12-16
 location: "IISc, Bangalore, India"
 ---
 
