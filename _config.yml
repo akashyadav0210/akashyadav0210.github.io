@@ -128,7 +128,7 @@ google:
   instant_search         : true # false (default), true
   
 # SEO Related
-google_site_verification : l0hrJlNzyQs3rHCQr1vn8rp_sJbG7HBEvySPC3lHhyQ
+google_site_verification : google7f9b11c63c77ee44.html
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
@@ -136,7 +136,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter "TaiwoAdebiyi1"
+  username               : &twitter ""
 facebook:
   username               :
   app_id                 :
