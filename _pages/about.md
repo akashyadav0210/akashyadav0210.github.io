@@ -23,9 +23,9 @@ News
 
 **July 23, 2025** - Presented our work on *Stochastic reduced-order modeling for characterization and correction of model-error* at USNCCM 2025 in Chicago, IL.
 
-**Nov 19, 2024** - Awarded the Jimmie A. Schindewolf Academic Scholarship for academic and research excellence at the University of Houston!
+**November 19, 2024** - Awarded the Jimmie A. Schindewolf Academic Scholarship for academic and research excellence at the University of Houston!
 
-**Jul 21 2024** – Finalist, UQ-TTA Student Paper Competition, WCCM/PANACM 2024, Vancouver.
+**July 21, 2024** – Finalist, UQ-TTA Student Paper Competition, WCCM/PANACM 2024, Vancouver.
 
 **May 28, 2024** – Presented our work on *Stochastic Subspace via Probabilistic PCA for Model-Form Uncertainty* at EMI/PMC 2024 in Chicago, IL.
 
