@@ -23,7 +23,7 @@ Education
   Thesis: *Structural Health Monitoring Accounting for Thermal Variability and Damage Using Approximate Bayesian Computation (ABC)*  
 
 - **B.Tech in Civil Engineering**, Indian Institute of Technology (IIT), Roorkee, May 2018  
-  CGPA: 8.75/10 (First Division)  
+  CGPA: 8.75/10 (First Division with Distinction)  
   Thesis: *Design of Hydro Power Project*  
 
 
