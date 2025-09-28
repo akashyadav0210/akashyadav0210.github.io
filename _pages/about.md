@@ -29,7 +29,7 @@ Education
 
 News
 ======
-**September 25, 2025** – Attended the *Third Scientific Machine Learning for Differential Equations* at the Oden Institute for Computational Engineering & Sciences, UT Austin.  
+**September 25, 2025** – Attended the *Third Scientific Machine Learning for Differential Equations* workshop at the Oden Institute for Computational Engineering & Sciences, UT Austin.  
 
 **July 23, 2025** – Presented Our Work on *Stochastic Reduced-Order Modeling for Characterization and Correction of Model-Error* at USNCCM 2025 in Chicago, IL.  
 
