@@ -19,6 +19,8 @@ Education
 
 News
 ======
+**September 25, 2025** - Attended the *Third Scientific Machine Learning for Differential Equations* at the Oden Institute for Computational Engineering & Sciences, UT Austin.
+
 **July 23, 2025** - Presented our work on *Stochastic reduced-order modeling for characterization and correction of model-error* at USNCCM 2025 in Chicago, IL.
 
 **Nov 19, 2024** - Awarded the Jimmie A. Schindewolf Academic Scholarship for academic and research excellence at the University of Houston!
