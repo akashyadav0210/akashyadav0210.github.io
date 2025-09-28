@@ -9,7 +9,7 @@ redirect_from:
 
 Hello! I am a PhD Candidate in [Uncertainty Quantification Group](https://uq.uh.edu/) at the University of Houston, advised by [Ruda Zhang](https://www.cive.uh.edu/faculty/zhang-ruda). 
 
-My research is driven by a deep commitment to developing data-driven and probabilistic methods that improve the resilience and reliability of computational models in engineering. I focus on developing fast and efficient algorithms for quantifying and reducing model error in computational mechanics, enabling more accurate and trustworthy simulations for complex engineering applications.
+My research centers on **model-form uncertainty**, developing probabilistic methods that improve the reliability of computational models in engineering and science. More recently, I have been working on **uncertainty-aware scientific foundation models**, aiming to make large-scale scientific models both accurate and trustworthy.  
 
 Education
 ===========
@@ -54,5 +54,4 @@ Contact
 :email: ayadav4 'at' uh 'dot' edu
 
 For collaboration opportunities, project discussions, or professional inquiries, feel free to reach out via email. 
-
 You can also reach me via [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).
