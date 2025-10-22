@@ -23,9 +23,7 @@ toc_sticky: true
       
  <br>
 
-       <a class="btn btn--primary btn--small" href="https://github.com/UQUH/SS_PPCA">Project page</a>
-
-       <a class="btn btn--success btn--small" href="https://arxiv.org/abs/2504.19963v2">PDF</a>         
+       <a class="btn btn--success btn--small" href="https://link.springer.com/article/10.1007/s00466-025-02701-6">PDF</a>         
           
        <a class="btn btn--warning btn--small" href="https://github.com/UQUH/SS_PPCA">Code</a>        
          
