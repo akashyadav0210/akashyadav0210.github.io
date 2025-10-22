@@ -34,7 +34,7 @@ toc_sticky: true
 
   <div class="publication">          
    <link rel="stylesheet" href="/assets/css/my.css">         
-   <div class="img"><a href="https://arxiv.org/abs/2510.06439"><img class="img_responsive" src="/images/pub/Prediction_disp.png"></a></div>         
+   <div class="img"><a href="https://arxiv.org/abs/2510.06439"><img class="img_responsive" src="/images/pub/BO_evolution.jpg"></a></div>         
    <div class="text">         
      <div class="title"><a id="SO-BO-scale" href="https://arxiv.org/abs/2510.06439">Bayesian Optimization under Uncertainty for Training a Scale Parameter in Stochastic Models</a></div>         
      <div class="authors"><strong>Akash Yadav</strong>, Ruda Zhang         
