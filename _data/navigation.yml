@@ -17,8 +17,8 @@ main:
   - title: "News"
     url: /news/
 
-  - title: "Projects"
-    url: /projects/
+  # - title: "Projects"
+  #   url: /projects/
 
   #- title: "Teaching"
   #  url: /teaching/    
