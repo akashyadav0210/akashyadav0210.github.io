@@ -54,3 +54,25 @@ toc_sticky: true
  </div> 
  <br>
 
+  <div class="publication">          
+   <link rel="stylesheet" href="/assets/css/my.css">         
+   <div class="img"><a href="https://arxiv.org/abs/2512.15624"><img class="img_responsive" src="/images/pub/Prediction_disp.png"></a></div>         
+   <div class="text">         
+     <div class="title"><a id="SS-Bootstrap" href="https://arxiv.org/abs/2512.15624">Nonparametric Stochastic Subspaces via the Bootstrap for Characterizing Model Error</a></div>         
+     <div class="authors"><strong>Akash Yadav</strong>, Ruda Zhang         
+     </div>         
+     <div>         
+       <em>arXiv, 2025</em> 
+ <br> 
+      
+ <br>
+
+       <a class="btn btn--success btn--small" href="https://arxiv.org/abs/2512.15624">PDF</a>         
+          
+       <a class="btn btn--warning btn--small" href="https://github.com/UQUH/SS_Bootstrap">Code</a>        
+         
+     </div>         
+   </div>         
+ </div> 
+ <br>
+
