@@ -15,15 +15,12 @@ Education
 ===========
 
 - **Ph.D. in Civil Engineering**, University of Houston, May 2027*  
-  CGPA: 4.0/4.0  
   Thesis: *Quantifying and Reducing Model Uncertainty using Stochastic Representations*  
 
 - **M.Tech (Research) in Civil Engineering**, Indian Institute of Science, Bangalore, June 2023  
-  CGPA: 8.3/10  
   Thesis: *Structural Health Monitoring Accounting for Thermal Variability and Damage Using Approximate Bayesian Computation (ABC)*  
 
 - **B.Tech in Civil Engineering**, Indian Institute of Technology, Roorkee, May 2018  
-  CGPA: 8.75/10 (First Division with Distinction)  
   Thesis: *Design of Hydro Power Project*  
 
 
