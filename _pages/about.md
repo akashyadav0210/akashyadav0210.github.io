@@ -9,7 +9,7 @@ redirect_from:
 
 Hello! I am a PhD Candidate in [Uncertainty Quantification Group](https://uq.uh.edu/) at the University of Houston, advised by [Ruda Zhang](https://www.cive.uh.edu/faculty/zhang-ruda). 
 
-My research develops **stochastic representations** (e.g., stochastic attention, probabilistic adaptation, and stochastic reduced-order modeling) to quantify, characterize, and reduce **model uncertainty** in computational and machine learning models.
+My research focuses on the development of **stochastic representations** (e.g., stochastic attention, probabilistic adaptation, and stochastic reduced-order modeling) to quantify and reduce **model uncertainty** in computational and machine learning models.
 
 Education
 ===========
@@ -18,11 +18,11 @@ Education
   CGPA: 4.0/4.0  
   Thesis: *Quantifying and Reducing Model Uncertainty using Stochastic Representations*  
 
-- **M.Tech (Research) in Civil Engineering**, Indian Institute of Science (IISc), Bangalore, June 2023  
+- **M.Tech (Research) in Civil Engineering**, Indian Institute of Science, Bangalore, June 2023  
   CGPA: 8.3/10  
   Thesis: *Structural Health Monitoring Accounting for Thermal Variability and Damage Using Approximate Bayesian Computation (ABC)*  
 
-- **B.Tech in Civil Engineering**, Indian Institute of Technology (IIT), Roorkee, May 2018  
+- **B.Tech in Civil Engineering**, Indian Institute of Technology, Roorkee, May 2018  
   CGPA: 8.75/10 (First Division with Distinction)  
   Thesis: *Design of Hydro Power Project*  
 
