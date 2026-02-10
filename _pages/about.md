@@ -9,14 +9,14 @@ redirect_from:
 
 Hello! I am a PhD Candidate in [Uncertainty Quantification Group](https://uq.uh.edu/) at the University of Houston, advised by [Ruda Zhang](https://www.cive.uh.edu/faculty/zhang-ruda). 
 
-My research centers on **model-form uncertainty**, developing probabilistic methods that improve the reliability of computational models in engineering and science. More recently, I have been working on **uncertainty-aware scientific foundation models**, aiming to make large-scale scientific models both accurate and trustworthy.  
+My research develops **stochastic representations** (e.g., stochastic attention, probabilistic adaptation, and stochastic reduced-order modeling) to quantify, characterize, and reduce **model uncertainty** in computational and machine learning models.
 
 Education
 ===========
 
 - **Ph.D. in Civil Engineering**, University of Houston, May 2027*  
   CGPA: 4.0/4.0  
-  Thesis: *Quantifying and Reducing Model-Form Uncertainty using Stochastic Subspaces*  
+  Thesis: *Quantifying and Reducing Model Uncertainty using Stochastic Representations*  
 
 - **M.Tech (Research) in Civil Engineering**, Indian Institute of Science (IISc), Bangalore, June 2023  
   CGPA: 8.3/10  
