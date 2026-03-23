@@ -26,7 +26,7 @@ Education
 
 News
 ======
-{% for item in site.data.news limit:5 %}
+{% for item in site.data.news limit:3 %}
 <p><strong>{{ item.date | date: "%B %d, %Y" }}</strong> – {{ item.text | markdownify | remove: "<p>" | remove: "</p>" }}</p>
 {% endfor %}
 <p><a href="/news/">More news</a></p>
