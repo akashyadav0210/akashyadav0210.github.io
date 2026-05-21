@@ -1,20 +1,10 @@
---- 
+---
 title: "Publications" 
 layout: single_noauthor 
 permalink: /publications/ 
 author_profile: true 
 toc: false
 ---
-
-<aside class="sidebar__right sticky">
-  <nav class="toc">
-    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Publication List</h4></header>
-    <ul class="toc__menu">
-      <li><a href="#2026">2026</a></li>
-      <li><a href="#2025">2025</a></li>
-    </ul>
-  </nav>
-</aside>
 
 ## 2026
 
