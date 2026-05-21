@@ -3,15 +3,24 @@ title: "Publications"
 layout: single_noauthor 
 permalink: /publications/ 
 author_profile: true 
-toc: true 
-toc_label: "Publication List" 
-toc_sticky: true 
+toc: false
 ---
+
+<aside class="sidebar__right sticky">
+  <nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Publication List</h4></header>
+    <ul class="toc__menu">
+      <li><a href="#2026">2026</a></li>
+      <li><a href="#2025">2025</a></li>
+    </ul>
+  </nav>
+</aside>
 
 ## 2026
 
  <div class="publication">          
    <link rel="stylesheet" href="/assets/css/my.css">         
+   <div class="img"><a href="https://arxiv.org/abs/2604.19530"><img class="img_responsive" src="/images/pub/figure1_vector_v3_rz.png"></a></div>         
    <div class="text">         
      <div class="title"><a id="stochastic-attention-scfm" href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a></div>         
      <div class="authors"><strong>Akash Yadav</strong>, Taiwo A. Adebiyi, Ruda Zhang         

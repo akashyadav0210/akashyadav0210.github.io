@@ -9,7 +9,7 @@ redirect_from:
 
 Hello! I am a Ph.D. candidate in the [Uncertainty Quantification Group](https://uq.uh.edu/) at the University of Houston, advised by [Dr. Ruda Zhang](https://www.cive.uh.edu/faculty/zhang-ruda).
 
-My research develops trustworthy AI methods for scientific discovery, with a focus on uncertainty-aware scientific foundation models, stochastic inference, Bayesian optimization, and computational automation. I am particularly interested in agentic AI systems for science: coding-agent workflows, reusable research skills, and evaluation harnesses that accelerate simulation, calibration, and scientific machine learning experiments.
+My research develops trustworthy AI methods for scientific discovery, with a focus on uncertainty-aware scientific foundation models, stochastic inference, Bayesian optimization, and computational mechanics. I am particularly interested in agentic AI systems for science: coding-agent workflows, reusable research skills, and evaluation harnesses that accelerate simulation, calibration, and scientific machine learning experiments.
 
 My earlier work focused on structural health monitoring, probabilistic damage detection under environmental variability, and model-form uncertainty in computational mechanics. That foundation continues to shape how I think about reliability, calibration, and uncertainty-aware decision-making in scientific AI.
 
@@ -19,7 +19,6 @@ Research Themes
 - **Agentic AI for Scientific Discovery:** coding-agent workflows, reusable skills, evaluation harnesses, and automated scientific experimentation.
 - **Trustworthy Scientific Foundation Models:** stochastic attention and probabilistic adaptation for calibrated uncertainty in transformer-based scientific models.
 - **Uncertainty Quantification and Model Error:** stochastic subspaces, reduced-order modeling, Bayesian calibration, and model-form uncertainty in computational mechanics.
-- **Computational Science Automation:** reproducible pipelines for simulation, calibration, benchmarking, and uncertainty-aware model evaluation.
 
 Education
 ===========
@@ -45,5 +44,5 @@ Contact
 ---------
 :email: ayadav4 'at' uh 'dot' edu
 
-I am interested in collaborations on trustworthy scientific AI, agentic AI for scientific discovery, uncertainty-aware foundation models, and computational science automation. Please feel free to reach out by email. 
+I am interested in collaborations on trustworthy scientific AI, agentic AI for scientific discovery, and uncertainty-aware foundation models. Please feel free to reach out by email. 
 You can also reach me via [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).
