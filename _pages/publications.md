@@ -8,6 +8,26 @@ toc_label: "Publication List"
 toc_sticky: true 
 ---
 
+## 2026
+
+ <div class="publication">          
+   <link rel="stylesheet" href="/assets/css/my.css">         
+   <div class="text">         
+     <div class="title"><a id="stochastic-attention-scfm" href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a></div>         
+     <div class="authors"><strong>Akash Yadav</strong>, Taiwo A. Adebiyi, Ruda Zhang         
+     </div>         
+     <div>         
+       <em>arXiv, 2026. Under review.</em> 
+ <br> 
+      
+ <br>
+
+       <a class="btn btn--success btn--small" href="https://arxiv.org/abs/2604.19530">PDF</a>         
+     </div>
+   </div>         
+ </div> 
+ <br>
+
 ## 2025
 
  <div class="publication">          
@@ -75,4 +95,3 @@ toc_sticky: true
    </div>         
  </div> 
  <br>
-
