@@ -17,11 +17,14 @@ main:
   - title: "News"
     url: /news/
 
+  - title: "Code"
+    url: /code/
+
   # - title: "Projects"
   #   url: /projects/
 
   #- title: "Teaching"
-  #  url: /teaching/    
+  #  url: /teaching/
      
   - title: "Blogs"
     url: /year-archive/

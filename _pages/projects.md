@@ -7,66 +7,77 @@ author_profile: true
 
 {% include base_path %}
 
-## <ins>Research Projects</ins>
+## Research
 
-My research develops trustworthy and uncertainty-aware methods for scientific machine learning, computational mechanics, and research automation. Across these projects, the common goal is to make scientific models more reliable, better calibrated, and easier to evaluate and deploy in practice.
+My research develops trustworthy scientific AI for computational mechanics, civil infrastructure, and scientific machine learning. I focus on uncertainty-aware scientific foundation models, agentic AI for science, Bayesian optimization, and stochastic representations for model-form uncertainty.
 
-## Agentic SciML experiment harness
+The broader goal is to build scientific learning systems that are not only accurate, but also calibrated, reliable, and easier to evaluate in practice. I am particularly interested in methods that support reproducible experimentation and more reliable engineering and scientific decision-making under uncertainty.
 
-Scientific machine learning experiments often involve repetitive setup, evaluation, and debugging steps that slow down iteration. I am interested in coding-agent-assisted workflows that make this process more systematic, reproducible, and scalable.
+## Current Themes
 
-1. I am developing an agentic workflow for scientific ML experimentation.
-   * The goal is to automate experiment setup, code generation, testing, evaluation, calibration diagnostics, and result summarization.
-   * A central idea is to use reusable instructions and skills so that common research tasks can be executed consistently across projects.
-2. This direction is motivated by the need for reproducible and scalable scientific workflows.
-   * In practice, much of research iteration is spent on orchestration rather than modeling.
-   * Agentic workflows can reduce that overhead and make it easier to compare methods, run benchmarks, and analyze failure modes.
+- [Trustworthy Scientific Foundation Models](#trustworthy-scientific-foundation-models)
+- [Agentic AI for Scientific Discovery](#agentic-ai-for-scientific-discovery)
+- [Bayesian Optimization and Automated Calibration](#bayesian-optimization-and-automated-calibration)
+- [Model-Form Uncertainty in Computational Mechanics](#model-form-uncertainty-in-computational-mechanics)
 
-## Uncertainty-aware scientific foundation models
+## Trustworthy Scientific Foundation Models {#trustworthy-scientific-foundation-models}
 
-Scientific foundation models are emerging as reusable learning systems for weather and climate, time-series forecasting, computational mechanics, and civil infrastructure. Their predictive accuracy is promising, but high-stakes engineering use requires calibrated uncertainty, not just strong point predictions.
+Scientific foundation models are becoming reusable learning systems for weather and climate, time-series forecasting, computational mechanics, and civil infrastructure. Their predictive accuracy is promising, but high-stakes scientific and engineering use requires calibrated uncertainty rather than deterministic point predictions alone.
 
-1. In [Paper](https://arxiv.org/abs/2604.19530), we develop inference-time stochastic attention for scientific foundation models.
-   * The key idea is to introduce structured stochasticity in attention so that variability in learned dependencies acts as a proxy for model-form uncertainty.
-   * Because the method is post hoc, it can produce uncertainty-aware predictions without retraining the pretrained backbone or changing the overall adaptation workflow.
-2. This work is aimed at trustworthy scientific AI for real engineering use.
-   * The broader goal is to support forecasting, inverse problems, digital twins, and monitoring while retaining calibrated uncertainty.
-   * It connects my earlier work on stochastic representations and model-form uncertainty with emerging foundation-style scientific models.
+1. In [Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention](https://arxiv.org/abs/2604.19530), we develop a post hoc stochastic attention framework for uncertainty-aware scientific foundation models.
+   - The main idea is to introduce structured stochasticity in attention, so that repeated stochastic inference produces calibrated predictive ensembles without retraining the pretrained backbone.
+   - This provides a practical route to uncertainty-aware forecasting in settings where attention already captures structured dependencies in scientific data.
+   - Related links: [Paper](https://arxiv.org/abs/2604.19530), [Publication entry]({{ base_path }}/publications/).
+2. This direction aims to support trustworthy foundation-style models under distribution shift, sparse observations, and partially known physics.
+   - The longer-term goal is reliable scientific AI for forecasting, inverse problems, digital twins, and infrastructure monitoring.
 
-## Bayesian optimization under uncertainty
+*Figure slot reserved for a stochastic attention overview or result figure.*
 
-Uncertainty-aware models are only useful in practice if they can also be calibrated efficiently. This project develops automated optimization workflows for noisy objectives arising in stochastic models.
+## Agentic AI for Scientific Discovery {#agentic-ai-for-scientific-discovery}
 
-1. In [Paper](https://arxiv.org/abs/2510.06439), we develop Bayesian optimization under uncertainty for training a scale parameter in stochastic models.
-   * The method is designed for noisy objectives arising in models such as SS-PPCA and SS-Bootstrap.
-   * It reduces tuning cost and improves reproducibility by replacing expensive trial-and-error search with a structured probabilistic optimization framework.
-   * Related materials: [Code](https://github.com/UQUH/SO-BO-scale), [EMI/PMC 2024](https://www.emi-conference.org/).
-2. More broadly, this direction supports automated calibration pipelines for scientific models.
-   * The aim is to make uncertainty-aware model selection and parameter tuning more systematic across computational science workflows.
+Scientific machine learning workflows often spend substantial effort on orchestration rather than modeling: experiment setup, testing, evaluation, debugging, calibration diagnostics, and result summarization. I am interested in agentic AI for science that makes these workflows more systematic, reusable, and reproducible.
 
-<p align="center">
-  <img src="/images/pub/BO_evolution.jpg" width="520" alt="Bayesian optimization under uncertainty figure" />
-</p>
+1. I am developing coding-agent-assisted scientific ML workflows built around reusable instructions, skills, and experiment harnesses.
+   - The aim is to automate recurring research tasks such as experiment setup, code generation, testing, evaluation, calibration checks, and result summarization.
+   - This direction is especially useful in research settings where many experiments differ only in configuration, model variant, or evaluation protocol.
+2. I view agentic AI for science as infrastructure for more reliable experimentation rather than a separate tool layer.
+   - Better workflow automation makes it easier to compare methods fairly, track failure modes, and scale uncertainty-aware evaluation across projects.
 
-## Stochastic subspaces for model error
+*Figure slot reserved for an agentic scientific workflow diagram.*
 
-Computational models often suffer from model-form uncertainty due to structural mismatch between the model and the physical system. This thread of my work develops probabilistic representations for characterizing and correcting that discrepancy.
+## Bayesian Optimization and Automated Calibration {#bayesian-optimization-and-automated-calibration}
 
-1. In [Paper](https://link.springer.com/article/10.1007/s00466-025-02701-6), we propose *Stochastic Subspace via Probabilistic Principal Component Analysis (SS-PPCA)* for characterizing model-form uncertainty.
-   * SS-PPCA builds a parametric stochastic subspace representation for high-dimensional simulation outputs.
-   * It provides a principled way to represent structured model discrepancy and improve predictive reliability.
-   * Related materials: [Code](https://github.com/UQUH/SS_PPCA), [WCCM/PANACM talk](https://www.wccm2024.org/).
+Uncertainty-aware models are only useful in practice if they can also be calibrated efficiently. This line of work develops Bayesian optimization methods for noisy objectives arising in stochastic scientific models, with the goal of reducing tuning cost and improving reproducibility.
 
-2. In [Preprint](https://arxiv.org/abs/2512.15624), we develop *Nonparametric Stochastic Subspaces via the Bootstrap (SS-Bootstrap)*.
-   * SS-Bootstrap uses the empirical data distribution directly and complements the parametric SS-PPCA framework.
-   * Related materials: [Code](https://github.com/UQUH/SS_Bootstrap), [CASML poster](https://casml.cc/wp-content/uploads/2024/12/AkashYadav_Poster_StochasticSubspace.pdf).
+1. In [Bayesian Optimization under Uncertainty for Training a Scale Parameter in Stochastic Models](https://arxiv.org/abs/2510.06439), we develop a probabilistic optimization framework for noisy calibration objectives.
+   - The method is designed for stochastic models such as SS-PPCA and SS-Bootstrap, where direct trial-and-error tuning is expensive and unstable.
+   - It improves the efficiency and reproducibility of parameter selection in uncertainty-aware scientific models.
+   - Related links: [Paper](https://arxiv.org/abs/2510.06439), [Code](https://github.com/UQUH/SO-BO-scale), [EMI/PMC 2024](https://www.emi-conference.org/).
+2. More broadly, this direction serves as an automated calibration backbone for trustworthy scientific AI.
+   - I expect these ideas to remain central as uncertainty-aware foundation models become larger and more expensive to tune.
 
+*Figure slot reserved for the Bayesian optimization calibration figure.*
+
+## Model-Form Uncertainty in Computational Mechanics {#model-form-uncertainty-in-computational-mechanics}
+
+Computational models often suffer from model-form uncertainty because the governing assumptions, discretizations, or constitutive choices do not perfectly match the physical system. My work in this area develops structured probabilistic representations for characterizing and correcting model discrepancy in high-dimensional simulation settings.
+
+1. In [Stochastic Subspace via Probabilistic Principal Component Analysis for Characterizing Model Error](https://link.springer.com/article/10.1007/s00466-025-02701-6), we propose SS-PPCA as a parametric stochastic subspace model for high-dimensional simulation outputs.
+   - SS-PPCA provides a structured way to represent model discrepancy and improve predictive reliability.
+   - Related links: [Paper](https://link.springer.com/article/10.1007/s00466-025-02701-6), [Code](https://github.com/UQUH/SS_PPCA), [WCCM/PANACM talk](https://www.wccm2024.org/).
+2. In [Nonparametric Stochastic Subspaces via the Bootstrap for Characterizing Model Error](https://arxiv.org/abs/2512.15624), we develop SS-Bootstrap as a complementary nonparametric alternative.
+   - SS-Bootstrap uses the empirical data distribution directly and expands the stochastic subspace framework beyond parametric assumptions.
+   - Related links: [Preprint](https://arxiv.org/abs/2512.15624), [Code](https://github.com/UQUH/SS_Bootstrap), [CASML poster](https://casml.cc/wp-content/uploads/2024/12/AkashYadav_Poster_StochasticSubspace.pdf).
 3. In ongoing work presented at [USNCCM 2025](https://usnccm18.usacm.org/home), I develop stochastic reduced-order modeling strategies for model-error characterization and correction.
-   * The key idea is to correct model discrepancy in a reduced space, lowering computational cost while preserving predictive fidelity.
-   * This work targets computational mechanics settings where both accuracy and efficiency are critical.
+   - The main idea is to correct discrepancy in a reduced space, lowering computational cost while preserving predictive fidelity.
+   - This line of work provides the methodological foundation for my newer research on uncertainty-aware scientific foundation models.
 
-<p align="center">
-  <img src="/images/pub/Prediction_disp.png" width="520" alt="Stochastic subspace and model-form uncertainty figure" />
-</p>
+*Figure slot reserved for the stochastic subspace and model-error correction figure.*
 
-For publication-specific details, see [Publications]({{ base_path }}/publications/) and [Talks]({{ base_path }}/talks/).
+## Earlier Related Work
+
+- In structural health monitoring, I developed probabilistic methods for damage detection under environmental variability and nonlinear damage effects, including work presented at [ICCMS 2022](https://www.iccms.in/).
+- In uncertainty quantification for PINNs, I explored GAN-augmented physics-informed neural networks to improve robustness under uncertain inputs and boundary conditions.
+- My earlier application-driven work in monitoring and inverse problems shaped my current emphasis on reliability, calibration, and uncertainty-aware scientific decision support.
+
+For publication-specific details, see [Publications]({{ base_path }}/publications/), [Talks]({{ base_path }}/talks/), and [Blog]({{ base_path }}/year-archive/).

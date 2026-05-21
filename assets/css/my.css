@@ -10,6 +10,18 @@ div.title a:hover{text-decoration:none}
 div.publication{padding-top:0px;padding-bottom:0px}
 div.publication div.img{max-width:300px;padding-right:10px}
 div.publication div.text{text-align:left}
+div.publication div.img.publication__img--fixed a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:145px;
+  background:#ffffff;
+}
+div.publication div.img.publication__img--fixed img{
+  width:100%;
+  height:145px;
+  object-fit:contain;
+}
 
 @media only screen and (max-width: 64em) {
     div.publication div.img{display:none}

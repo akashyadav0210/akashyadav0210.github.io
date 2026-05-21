@@ -10,7 +10,7 @@ toc: false
 
  <div class="publication">          
    <link rel="stylesheet" href="/assets/css/my.css">         
-   <div class="img"><a href="https://arxiv.org/abs/2604.19530"><img class="img_responsive" src="/images/pub/figure1_vector_v3_rz.png"></a></div>         
+   <div class="img publication__img--fixed"><a href="https://arxiv.org/abs/2604.19530"><img class="img_responsive" src="/images/pub/figure1_vector_v3_rz.png" alt="Stochastic attention paper figure"></a></div>         
    <div class="text">         
      <div class="title"><a id="stochastic-attention-scfm" href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a></div>         
      <div class="authors"><strong>Akash Yadav</strong>, Taiwo A. Adebiyi, Ruda Zhang         

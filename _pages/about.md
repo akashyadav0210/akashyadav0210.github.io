@@ -9,16 +9,18 @@ redirect_from:
 
 Hello! I am a Ph.D. candidate in the [Uncertainty Quantification Group](https://uq.uh.edu/) at the University of Houston, advised by [Dr. Ruda Zhang](https://www.cive.uh.edu/faculty/zhang-ruda).
 
-My research develops trustworthy AI methods for scientific discovery, with a focus on uncertainty-aware scientific foundation models, stochastic inference, Bayesian optimization, and computational mechanics. I am particularly interested in agentic AI systems for science: coding-agent workflows, reusable research skills, and evaluation harnesses that accelerate simulation, calibration, and scientific machine learning experiments.
+My research develops trustworthy scientific AI for engineering and computational science, with a focus on uncertainty-aware scientific foundation models, model calibration, Bayesian optimization, and scientific discovery automation. I build methods that make scientific models more reliable, better calibrated, and more useful for engineering and scientific decision-making.
 
-My earlier work focused on structural health monitoring, probabilistic damage detection under environmental variability, and model-form uncertainty in computational mechanics. That foundation continues to shape how I think about reliability, calibration, and uncertainty-aware decision-making in scientific AI.
+My earlier work focused on structural health monitoring, probabilistic damage detection under environmental variability, and model-form uncertainty in computational mechanics. That foundation now informs my current direction in trustworthy scientific AI, including uncertainty-aware scientific foundation models and agentic scientific ML workflows.
 
 Research Themes
 ===========
 
-- **Agentic AI for Scientific Discovery:** coding-agent workflows, reusable skills, evaluation harnesses, and automated scientific experimentation.
-- **Trustworthy Scientific Foundation Models:** stochastic attention and probabilistic adaptation for calibrated uncertainty in transformer-based scientific models.
-- **Uncertainty Quantification and Model Error:** stochastic subspaces, reduced-order modeling, Bayesian calibration, and model-form uncertainty in computational mechanics.
+- **Trustworthy Scientific AI:** uncertainty-aware scientific foundation models, calibrated stochastic inference, and reliable decision-making.
+- **Agentic AI for Scientific Discovery:** coding-agent workflows, reusable skills, evaluation harnesses, and scientific experimentation automation.
+- **Uncertainty Quantification and Model Error:** stochastic subspaces, reduced-order modeling, Bayesian calibration, and computational mechanics.
+
+More detail on papers and technical writing is available on the [Publications](/publications/) and [Blog](/year-archive/) pages.
 
 Education
 ===========
