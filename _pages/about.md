@@ -11,18 +11,11 @@ Hello! I am a Ph.D. candidate in the [Uncertainty Quantification Group](https://
 
 **I expect to complete my Ph.D. in May 2027 and am seeking postdoctoral positions in trustworthy scientific AI and uncertainty quantification, starting Summer/Fall 2027.** I am happy to talk with prospective hosts and collaborators — please [email me](mailto:ayadav4@uh.edu).
 
-My research builds predictive models that know when they don't know — and what to do about it. I work on uncertainty for reduced-order surrogates and for pretrained scientific foundation models, on the principle that uncertainty belongs in a model's structure rather than in a correction bolted onto its outputs, and that it has to be calibrated against observed error before anyone acts on it.
+My research builds predictive models that know when they don't know — and what to do about it. I work on uncertainty for reduced-order surrogates and for scientific foundation models, on the principle that uncertainty belongs in a model's structure rather than in a correction bolted onto its outputs, and that it has to be calibrated against observed error before anyone acts on it.
 
 My earlier work was in structural health monitoring, where a damage signal and a seasonal temperature swing look alike in the data. That problem is what pushed me toward model-form uncertainty in computational mechanics, and from there to trustworthy scientific AI.
 
-Research Themes
-===========
-
-- **Calibrating models I cannot retrain:** uncertainty for frozen, pretrained scientific foundation models, with no access to gradients or training data.
-- **Model error in a model's structure:** stochastic subspaces and reduced-order modeling that treat the basis itself as uncertain.
-- **Uncertainty that changes decisions:** Bayesian optimization under uncertainty, and where to spend the next expensive simulation or experiment.
-
-The [Research](/research/) page sets out the full agenda and where I want to take it next; [Publications](/publications/) and the [Blog](/year-archive/) have the papers and technical writing.
+See the [Research](/research/) page for what I have built, and [Publications](/publications/) for the papers.
 
 Education
 ===========
