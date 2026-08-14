@@ -8,4 +8,4 @@ date: 2026-07-24
 location: "Munich, Germany"
 ---
 
-[More information here](https://www.wccm2026.org/)
+[More information here](https://wccm-eccomas2026.org/)

@@ -11,9 +11,9 @@ Hello! I am a Ph.D. candidate in the [Uncertainty Quantification Group](https://
 
 **I expect to complete my Ph.D. in May 2027 and am seeking postdoctoral positions in trustworthy scientific AI and uncertainty quantification, starting Summer/Fall 2027.** I am happy to talk with prospective hosts and collaborators — please [email me](mailto:ayadav4@uh.edu).
 
-My research builds predictive models that know when they don't know — and what to do about it. I work on uncertainty for reduced-order surrogates and for scientific foundation models, on the principle that uncertainty belongs in a model's structure rather than in a correction bolted onto its outputs, and that it has to be calibrated against observed error before anyone acts on it.
+My research builds predictive models that know when they don't know. Engineering decisions increasingly rest on models nobody can fully check — fast surrogates standing in for simulations too expensive to run, and pretrained foundation models emulating physics — and they return a confident number whether or not they are still in a regime where they work. I make those models report how far they should be trusted, across model uncertainty in computational mechanics, calibration of scientific foundation models, and the optimization that makes both practical.
 
-My earlier work was in structural health monitoring, where a damage signal and a seasonal temperature swing look alike in the data. That problem is what pushed me toward model-form uncertainty in computational mechanics, and from there to trustworthy scientific AI.
+I came to this from structural health monitoring, where a damage signal and a seasonal temperature swing look alike in the data — a monitoring system that cannot tell them apart reports a crack that is not there, and does it with complete confidence.
 
 See the [Research](/research/) page for what I have built, and [Publications](/publications/) for the papers.
 
