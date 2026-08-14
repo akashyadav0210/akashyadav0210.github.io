@@ -86,6 +86,8 @@ Also on my [Google Scholar profile](https://scholar.google.com/citations?user=d-
 
        <a class="btn btn--success btn--small" href="https://doi.org/10.1007/s00466-025-02701-6">Journal</a>
 
+       <a class="btn btn--info btn--small" href="https://arxiv.org/abs/2504.19963">arXiv</a>
+
        <a class="btn btn--warning btn--small" href="https://github.com/UQUH/SS_PPCA">Code</a>
 
      </div>
