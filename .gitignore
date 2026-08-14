@@ -17,3 +17,6 @@ LOCAL_WEBSITE_ROADMAP.md
 
 # Bundler local config (gems live outside the repo)
 .bundle/
+
+# local preview override
+_config_localpreview.yml
