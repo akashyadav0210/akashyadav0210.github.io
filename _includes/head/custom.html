@@ -13,6 +13,19 @@
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
 
+<!-- Social preview cards.
+     The theme only emits og:image from page.header.image, and og:description only
+     when a page has an excerpt, so site-wide defaults are supplied here. -->
+{% unless page.header.image or page.header.overlay_image %}
+  <meta property="og:image" content="{{ base_path }}/images/{{ site.og_image }}"/>
+  <meta property="og:image:alt" content="{{ site.author.name }}"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:image" content="{{ base_path }}/images/{{ site.og_image }}"/>
+{% endunless %}
+{% unless page.excerpt %}
+  <meta property="og:description" content="{{ page.description | default: site.description | markdownify | strip_html | strip_newlines | escape_once }}"/>
+{% endunless %}
+
 <!-- Support for MatJax -->
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
