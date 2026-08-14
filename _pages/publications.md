@@ -23,7 +23,7 @@ Also on my [Google Scholar profile](https://scholar.google.com/citations?user=d-
  <br>
  <br>
 
-       <a class="btn btn--success btn--small" href="https://arxiv.org/abs/2604.19530">arXiv</a>
+       <a class="btn btn--info btn--small" href="https://arxiv.org/abs/2604.19530">arXiv</a>
      </div>
    </div>
  </div>
