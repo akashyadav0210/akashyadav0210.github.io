@@ -9,6 +9,8 @@ redirect_from:
 
 Hello! I am a Ph.D. candidate in the [Uncertainty Quantification Group](https://uq.uh.edu/) at the University of Houston, advised by [Dr. Ruda Zhang](https://www.cive.uh.edu/faculty/zhang-ruda).
 
+**I expect to complete my Ph.D. in May 2027 and am seeking postdoctoral positions in trustworthy scientific AI and uncertainty quantification, starting Summer/Fall 2027.** I am happy to talk with prospective hosts and collaborators — please [email me](mailto:ayadav4@uh.edu).
+
 My research develops trustworthy scientific AI for engineering and computational science, with a focus on uncertainty-aware scientific foundation models, model calibration, Bayesian optimization, and scientific discovery automation. I build methods that make scientific models more reliable, better calibrated, and more useful for engineering and scientific decision-making.
 
 My earlier work focused on structural health monitoring, probabilistic damage detection under environmental variability, and model-form uncertainty in computational mechanics. That foundation now informs my current direction in trustworthy scientific AI, including uncertainty-aware scientific foundation models and agentic scientific ML workflows.

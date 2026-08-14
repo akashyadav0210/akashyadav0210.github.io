@@ -1,8 +1,10 @@
 ---
 layout: archive
 title: "Research"
-permalink: /projects/
+permalink: /research/
 author_profile: true
+redirect_from:
+  - /projects/
 ---
 
 {% include base_path %}
@@ -31,7 +33,6 @@ Scientific foundation models are becoming reusable learning systems for weather 
 2. This direction aims to support trustworthy foundation-style models under distribution shift, sparse observations, and partially known physics.
    - The longer-term goal is reliable scientific AI for forecasting, inverse problems, digital twins, and infrastructure monitoring.
 
-*Figure slot reserved for a stochastic attention overview or result figure.*
 
 ## Agentic AI for Scientific Discovery {#agentic-ai-for-scientific-discovery}
 
@@ -43,7 +44,6 @@ Scientific machine learning workflows often spend substantial effort on orchestr
 2. I view agentic AI for science as infrastructure for more reliable experimentation rather than a separate tool layer.
    - Better workflow automation makes it easier to compare methods fairly, track failure modes, and scale uncertainty-aware evaluation across projects.
 
-*Figure slot reserved for an agentic scientific workflow diagram.*
 
 ## Bayesian Optimization and Automated Calibration {#bayesian-optimization-and-automated-calibration}
 
@@ -56,7 +56,6 @@ Uncertainty-aware models are only useful in practice if they can also be calibra
 2. More broadly, this direction serves as an automated calibration backbone for trustworthy scientific AI.
    - I expect these ideas to remain central as uncertainty-aware foundation models become larger and more expensive to tune.
 
-*Figure slot reserved for the Bayesian optimization calibration figure.*
 
 ## Model-Form Uncertainty in Computational Mechanics {#model-form-uncertainty-in-computational-mechanics}
 
@@ -72,7 +71,6 @@ Computational models often suffer from model-form uncertainty because the govern
    - The main idea is to correct discrepancy in a reduced space, lowering computational cost while preserving predictive fidelity.
    - This line of work provides the methodological foundation for my newer research on uncertainty-aware scientific foundation models.
 
-*Figure slot reserved for the stochastic subspace and model-error correction figure.*
 
 ## Earlier Related Work
 
