@@ -19,7 +19,7 @@ I work on making such models report how far they should be trusted, and on makin
 
 <figure class="rp-fig">
   <div class="rp-fig-scroll">
-    <img src="{{ base_path }}/images/research/research-done.svg" alt="Three lines of completed work. Model uncertainty in computational mechanics, addressed with stochastic reduced-order models, giving model error you can propagate. Calibrating transformer-based scientific foundation models, addressed with sample-average stochastic attention, giving calibrated predictions with the backbone untouched. Hyperparameter optimization in stochastic models, addressed with Bayesian optimization under uncertainty, reaching the same answer in 40 times fewer runs.">
+    <img src="{{ base_path }}/images/research/research-done.svg" alt="Three lines of completed work. Model uncertainty in computational mechanics, addressed with stochastic reduced-order models, giving model error you can propagate. Calibrating transformer-based scientific foundation models, addressed with inference-time stochastic attention, giving calibrated predictions with the backbone untouched. Hyperparameter optimization in stochastic models, addressed with Bayesian optimization under uncertainty, reaching the same answer in 40 times fewer runs.">
   </div>
 </figure>
 
