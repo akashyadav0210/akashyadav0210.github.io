@@ -11,18 +11,18 @@ Hello! I am a Ph.D. candidate in the [Uncertainty Quantification Group](https://
 
 **I expect to complete my Ph.D. in May 2027 and am seeking postdoctoral positions in trustworthy scientific AI and uncertainty quantification, starting Summer/Fall 2027.** I am happy to talk with prospective hosts and collaborators — please [email me](mailto:ayadav4@uh.edu).
 
-My research develops trustworthy scientific AI for engineering and computational science, with a focus on uncertainty-aware scientific foundation models, model calibration, Bayesian optimization, and scientific discovery automation. I build methods that make scientific models more reliable, better calibrated, and more useful for engineering and scientific decision-making.
+My research builds predictive models that know when they don't know — and what to do about it. I work on uncertainty for reduced-order surrogates and for pretrained scientific foundation models, on the principle that uncertainty belongs in a model's structure rather than in a correction bolted onto its outputs, and that it has to be calibrated against observed error before anyone acts on it.
 
-My earlier work focused on structural health monitoring, probabilistic damage detection under environmental variability, and model-form uncertainty in computational mechanics. That foundation now informs my current direction in trustworthy scientific AI, including uncertainty-aware scientific foundation models and agentic scientific ML workflows.
+My earlier work was in structural health monitoring, where a damage signal and a seasonal temperature swing look alike in the data. That problem is what pushed me toward model-form uncertainty in computational mechanics, and from there to trustworthy scientific AI.
 
 Research Themes
 ===========
 
-- **Trustworthy Scientific AI:** uncertainty-aware scientific foundation models, calibrated stochastic inference, and reliable decision-making.
-- **Agentic AI for Scientific Discovery:** coding-agent workflows, reusable skills, evaluation harnesses, and scientific experimentation automation.
-- **Uncertainty Quantification and Model Error:** stochastic subspaces, reduced-order modeling, Bayesian calibration, and computational mechanics.
+- **Calibrating models I cannot retrain:** uncertainty for frozen, pretrained scientific foundation models, with no access to gradients or training data.
+- **Model error in a model's structure:** stochastic subspaces and reduced-order modeling that treat the basis itself as uncertain.
+- **Uncertainty that changes decisions:** Bayesian optimization under uncertainty, and where to spend the next expensive simulation or experiment.
 
-More detail on papers and technical writing is available on the [Publications](/publications/) and [Blog](/year-archive/) pages.
+The [Research](/research/) page sets out the full agenda and where I want to take it next; [Publications](/publications/) and the [Blog](/year-archive/) have the papers and technical writing.
 
 Education
 ===========
@@ -48,5 +48,5 @@ Contact
 ---------
 :email: ayadav4 'at' uh 'dot' edu
 
-I am interested in collaborations on trustworthy scientific AI, agentic AI for scientific discovery, and uncertainty-aware foundation models. Please feel free to reach out by email. 
+I am interested in collaborations on calibrated uncertainty for scientific foundation models, model-form uncertainty in computational mechanics, and decision-making under uncertainty. Please feel free to reach out by email. 
 You can also reach me via [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).

@@ -1,0 +1,50 @@
+/* assets/css/research.css — loaded only on pages with front-matter `custom_css: research` */
+
+/* Kill the theme's sibling-paragraph indent (_sass/layout/_page.scss) inside our blocks */
+.page__content .rp-entry p + p,
+.page__content .rp-thrusts p + p,
+.page__content .rp-fence p + p { text-indent: 0; margin-top: 0; }
+
+.rp-lede { font-size: 1.22em; line-height: 1.45; font-style: italic;
+  color: var(--global-text-color-light); border-left: 3px solid var(--global-border-color);
+  padding-left: .8em; margin: 0 0 1.6em; text-indent: 0; }
+
+.rp-read { font-size: .93em; color: var(--global-text-color-light);
+  border-top: 1px dotted var(--global-border-color); padding-top: .6em; text-indent: 0; }
+
+.rp-entry { margin: 0 0 2.4em; }
+.rp-entry h3 { margin-top: 0; border-bottom: 0; padding-bottom: 0; }
+
+.rp-decision { font-style: italic; font-size: .95em; color: var(--global-text-color-light);
+  border-left: 3px solid var(--global-border-color); padding-left: .8em;
+  margin: -.2em 0 1em; text-indent: 0; }
+
+.rp-opens { font-size: .93em; border-top: 1px dotted var(--global-border-color);
+  padding-top: .55em; margin-top: 1em; text-indent: 0; }
+.rp-opens strong { color: var(--global-text-color); }
+
+.rp-key { font-size: .85em; color: var(--global-text-color-light);
+  margin-top: .5em; text-indent: 0; }
+
+.rp-fence { border-left: 4px solid var(--global-border-color);
+  padding: .4em 0 .4em 1em; margin: 0 0 1.8em; font-size: .95em; text-indent: 0; }
+
+.rp-thrusts { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4em; margin: 1.8em 0; }
+.rp-thrusts > div { border: 1px solid var(--global-border-color);
+  border-top: 3px solid var(--global-border-color); border-radius: 3px; padding: 1em 1.1em; }
+.rp-thrusts h3 { margin-top: 0; font-size: 1.02em; border-bottom: 0; padding-bottom: 0; }
+.rp-thrusts p { font-size: .93em; }
+.rp-thrusts .rp-builds { font-size: .85em; color: var(--global-text-color-light);
+  border-top: 1px dotted var(--global-border-color); padding-top: .55em; margin-bottom: 0; }
+
+/* Figures */
+.rp-fig { margin: 1.8em 0; color: var(--global-text-color); }
+.rp-fig img { display: block; width: 100%; height: auto; margin: 0 auto; }
+.rp-fig figcaption { font-size: .87em; line-height: 1.5;
+  color: var(--global-fig-caption-color); margin-top: .8em; }
+
+/* The framework diagram is ~5.6:1; below ~700px it would be unreadable if scaled to
+   fit, so let it keep a legible minimum width and scroll horizontally instead. */
+.rp-fig-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.rp-fig-scroll img { min-width: 640px; }
