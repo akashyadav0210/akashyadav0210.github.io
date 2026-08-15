@@ -144,10 +144,17 @@ facebook:
 og_image                 : "Akash_cropped.png"  # Open Graph/Twitter default site image (filename only; theme prepends /images/)
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
+# Feeds schema.org "sameAs", which tells search engines that this site and the
+# profiles below are the same person. "Akash Yadav" is a common name, so this
+# is the main signal that disambiguates me from everyone else who shares it.
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : Akash Yadav
+  links:
+    - https://scholar.google.com/citations?user=d-_3QeEAAAAJ&hl=en
+    - https://orcid.org/0000-0002-4557-4097
+    - https://github.com/akashyadav0210
+    - https://www.linkedin.com/in/akash-yadav-018535112/
 
 
 # Analytics

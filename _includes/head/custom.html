@@ -24,7 +24,14 @@
   <meta name="twitter:image" content="{{ base_path }}/images/{{ site.og_image }}"/>
 {% endunless %}
 {% unless page.excerpt %}
-  <meta property="og:description" content="{{ page.description | default: site.description | markdownify | strip_html | strip_newlines | escape_once }}"/>
+  {% assign fallback_description = page.description | default: site.description | markdownify | strip_html | strip_newlines | escape_once %}
+  <meta property="og:description" content="{{ fallback_description }}"/>
+  {% comment %}
+    The theme emits <meta name="description"> only when a page has an excerpt,
+    so pages without one had no description for search engines to use as a
+    snippet. Mutually exclusive with the theme's tag, so no duplicates.
+  {% endcomment %}
+  <meta name="description" content="{{ fallback_description }}"/>
 {% endunless %}
 
 <!-- Support for MatJax -->
