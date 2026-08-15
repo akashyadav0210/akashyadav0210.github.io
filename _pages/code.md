@@ -14,7 +14,7 @@ Research code accompanying my papers, developed in the [Uncertainty Quantificati
 
 ### SS-PPCA
 
-Stochastic subspaces via probabilistic PCA — a parametric distribution over reduced subspaces for characterizing model error in high-dimensional simulations.
+A parametric distribution over reduced subspaces for characterizing model error in high-dimensional simulations.
 
 <p class="rp-key">MATLAB R2023b or later · Statistics and Machine Learning Toolbox · Optimization Toolbox</p>
 
