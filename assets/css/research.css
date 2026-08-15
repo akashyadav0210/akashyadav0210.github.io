@@ -13,7 +13,9 @@
 .rp-key { font-size: .85em; color: var(--global-text-color-light);
   margin-top: .6em; text-indent: 0; }
 
-.rp-fig { margin: 0 0 2.4em; }
+.rp-fig { margin: 1.6em 0 2.2em; }
+.rp-fig figcaption { font-size: .88em; line-height: 1.5; margin-top: .7em;
+  color: var(--global-text-color-light); }
 /* The diagram is exported from LaTeX with a transparent background and dark olive
    text, which disappears against the dark theme. Sit it on its own light panel so
    it reads the same in both themes. */
