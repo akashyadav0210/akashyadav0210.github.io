@@ -8,7 +8,7 @@ custom_css: research
 
 {% include base_path %}
 
-Research code accompanying my papers, developed in the [Uncertainty Quantification Group](https://uq.uh.edu/) and released under the [UQUH organization](https://github.com/UQUH). Each repository reproduces the main experiments of its paper.
+Research code accompanying our papers, developed in the [Uncertainty Quantification Group](https://uq.uh.edu/) and released under the [UQUH organization](https://github.com/UQUH). Each repository reproduces the main experiments of its paper.
 
 <div class="rp-entry" markdown="1">
 
