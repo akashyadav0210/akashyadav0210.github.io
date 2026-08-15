@@ -11,10 +11,10 @@ custom_css: research
 
 <p class="rp-lede">The systems the methods were built for, and the decisions they have to support.</p>
 
-<div class="rp-entry" markdown="1">
+<details class="rp-proj" id="space-structure" open markdown="1">
+<summary><span class="rp-proj-title">Shock response of a space structure</span><span class="rp-proj-sub">42,486-DOF spacecraft component · 38 minutes → 0.2 seconds · calibrated intervals on shock response</span></summary>
 
-### Shock response of a space structure
-{: #space-structure }
+<div class="rp-proj-body" markdown="1">
 
 A component of a space structure takes an impulse load. A heavy central mass sits on rigid links above a cylindrical shell, and behind a shock-absorption block sits essential equipment. The question after the event is whether the acceleration that reached that equipment stayed within survivable limits — and it has to be answered from a handful of monitored points, close to real time.
 
@@ -35,11 +35,12 @@ I made the fast model report its own reliability. Stochastic subspaces put the r
 <p class="rp-key">Model built in LS-DYNA; transient response integrated with Newmark-β. <a href="https://doi.org/10.1007/s00466-025-02701-6">SS-PPCA</a> · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1948">SS-Bootstrap</a> · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1854">BO under uncertainty</a></p>
 
 </div>
+</details>
 
-<div class="rp-entry" markdown="1">
+<details class="rp-proj" id="foundation-models" markdown="1">
+<summary><span class="rp-proj-title">Calibrated forecasting with scientific foundation models</span><span class="rp-proj-sub">Frozen pretrained backbones · uncertainty without retraining · evaluated on ClimaX</span></summary>
 
-### Calibrated forecasting with scientific foundation models
-{: #foundation-models }
+<div class="rp-proj-body" markdown="1">
 
 Pretrained foundation models are being adopted as general-purpose surrogates for weather and climate. ClimaX is one of them: a transformer trained on atmospheric data that produces forecasts far faster than numerical weather prediction, and produces them as single deterministic fields. A forecast without a credible spread cannot support a decision that depends on how bad the tail might be.
 
@@ -55,11 +56,12 @@ I calibrate them from the outside. Resampling attention at inference turns a fro
 <p class="rp-key">Evaluated on pretrained atmospheric and time-series backbones. <a href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a> (under review)</p>
 
 </div>
+</details>
 
-<div class="rp-entry" markdown="1">
+<details class="rp-proj" id="shm" markdown="1">
+<summary><span class="rp-proj-title">Damage detection on steel truss bridges</span><span class="rp-proj-sub">Damage vs. seasonal temperature · likelihood-free inference · M.Tech thesis, IISc</span></summary>
 
-### Damage detection on steel truss bridges
-{: #shm }
+<div class="rp-proj-body" markdown="1">
 
 A crack changes how a bridge vibrates. So does a twenty-degree change in air temperature, and it changes it by more. Any monitoring system that cannot separate the two will either raise alarms every summer or stay silent through real damage — and the underlying inverse problem has no likelihood you can write down.
 
@@ -68,5 +70,26 @@ I used approximate Bayesian computation to infer damage state while treating the
 <p class="rp-key">M.Tech (Research) thesis, Indian Institute of Science, with Dr. Ananth Ramaswamy. <a href="https://etd.iisc.ac.in/handle/2005/6115">Thesis</a> · <a href="https://github.com/akashyadav0210/ABC_SHM">code</a> · presented at ICCMS 2022, IIT Indore</p>
 
 </div>
+</details>
 
 Methods behind these on the [Research]({{ base_path }}/research/) page · papers on [Publications]({{ base_path }}/publications/)
+
+<script>
+/* Open the targeted project when arriving via an anchor (e.g. /projects/#shm);
+   without this a cross-page link lands on a collapsed section.
+   Block comments only: compress_html strips newlines in production, which would
+   make a // comment swallow the rest of the script. */
+(function () {
+  function openTarget() {
+    var id = window.location.hash.slice(1);
+    if (!id) { return; }
+    var el = document.getElementById(id);
+    if (el && el.tagName === 'DETAILS') {
+      el.open = true;
+      el.scrollIntoView();
+    }
+  }
+  window.addEventListener('hashchange', openTarget);
+  openTarget();
+})();
+</script>
