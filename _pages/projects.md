@@ -23,9 +23,9 @@ A component of a space structure takes an impulse load. A heavy central mass sit
   <figcaption>The component as modelled, and the shock it has to survive: the impulse decays over about 75&nbsp;ms while exciting the full frequency content of the structure.</figcaption>
 </figure>
 
-The high-fidelity finite element model that answers it has **42,486 degrees of freedom** and takes about **38 minutes** per run. A reduced-order model answers in **0.2 seconds**, roughly 11,000× faster. That speedup is the only reason monitoring at this cadence is possible, and it is also what makes the answer untrustworthy: reducing the model discards exactly the information needed to judge the result.
+The high-fidelity finite element model that answers it has **42,486 degrees of freedom** and takes about **38 minutes** per run. A reduced-order model answers in **0.2 seconds**, roughly 11,000× faster. That speedup is the only reason monitoring at this cadence is possible, and it is also what makes the answer untrustworthy: reducing the model discards the information needed to judge the result.
 
-I made the fast model report its own reliability. Stochastic subspaces put the reduction error back into the prediction as a calibrated interval on acceleration and velocity at the critical nodes, including at locations and quantities never observed while fitting. Bayesian optimization under uncertainty makes the calibration affordable at this scale, so the whole thing stays cheaper than the simulation it replaces.
+I made the fast model report its own reliability. Stochastic subspaces put the reduction error back into the prediction as a calibrated interval on acceleration and velocity at the critical nodes, and at nodes the fitting never saw. Bayesian optimization under uncertainty makes the calibration affordable at this scale, so the whole thing stays cheaper than the simulation it replaces.
 
 <figure class="rp-fig">
   <img src="{{ base_path }}/images/projects/space-structure-result.png" alt="Acceleration in X at a critical node over 75 milliseconds. The high-fidelity model is in black, the reduced-order model in dashed red, the stochastic reduced-order model mean in blue, and its 95 percent predictive interval as a shaded band. Three inset panels zoom into the early, middle and late response. The reduced model systematically understates the peaks, while the shaded interval covers the high-fidelity response.">
@@ -51,7 +51,7 @@ Pretrained foundation models are being adopted as general-purpose surrogates for
 
 The groups using these models generally cannot retrain them. The weights come from someone else, the compute to fine-tune them is not available, and the target system may have no training data at all.
 
-I calibrate them from the outside. Resampling attention at inference turns a frozen backbone into a predictive ensemble whose spread tracks the errors it actually makes, with every pretrained weight untouched. It works for fine-tuned checkpoints as well as pretrained ones, which is what most scientific workflows are actually running.
+I calibrate them from the outside. Resampling attention at inference turns a frozen backbone into a predictive ensemble whose spread tracks the errors it makes, with every pretrained weight untouched. Fine-tuned checkpoints work the same way, which matters because few groups deploy a foundation model straight out of the box.
 
 <p class="rp-key">Evaluated on pretrained atmospheric and time-series backbones. <a href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a> (under review)</p>
 
