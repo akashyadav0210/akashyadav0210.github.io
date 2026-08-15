@@ -9,7 +9,7 @@ redirect_from:
 
 Hello! I am a Ph.D. candidate in the [Uncertainty Quantification Group](https://uq.uh.edu/) at the University of Houston, advised by [Dr. Ruda Zhang](https://www.cive.uh.edu/faculty/zhang-ruda).
 
-**I expect to complete my Ph.D. in May 2027 and am seeking postdoctoral positions in trustworthy scientific AI and uncertainty quantification, starting Summer/Fall 2027.** I am happy to talk with prospective hosts and collaborators — please [email me](mailto:ayadav4@uh.edu).
+**I expect to complete my Ph.D. in May 2027 and am seeking postdoctoral positions or research-oriented industry roles in trustworthy scientific AI and uncertainty quantification, starting Summer/Fall 2027.** I am happy to talk with prospective hosts, collaborators and teams — reach me by [email](mailto:ayadav4@uh.edu) or on [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).
 
 My research builds predictive models that know when they don't know. Engineering decisions increasingly rest on models nobody can fully check — fast surrogates standing in for simulations too expensive to run, and pretrained foundation models emulating physics — and they return a confident number whether or not they are still in a regime where they work. I make those models report how far they should be trusted, across model uncertainty in computational mechanics, calibration of scientific foundation models, and the optimization that makes both practical.
 
