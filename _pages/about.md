@@ -15,7 +15,7 @@ My research builds predictive models that know when they don't know. Engineering
 
 I came to this from structural health monitoring, where a damage signal and a seasonal temperature swing look alike in the data — a monitoring system that cannot tell them apart reports a crack that is not there, and does it with complete confidence.
 
-See the [Research](/research/) page for what I have built, and [Publications](/publications/) for the papers.
+See [Research](/research/) for the methods, [Projects](/projects/) for the systems they were built for, and [Publications](/publications/) for the papers.
 
 Education
 ===========
