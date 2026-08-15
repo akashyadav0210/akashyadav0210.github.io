@@ -13,9 +13,9 @@ custom_css: research
 
 <p class="rp-lede">Building predictive models that know when they don't know.</p>
 
-Engineering and scientific decisions increasingly rest on models nobody can fully check: reduced-order surrogates standing in for simulations that are too expensive to run, and pretrained foundation models emulating physics across whole problem families. Almost all of them return a confident number whether or not they are in a regime where they still work — and a confident number is the hardest kind of wrong to catch.
+A component of a space structure takes a shock. Essential equipment sits behind a shock-absorption block, and the question is whether the acceleration reaching it stayed within survivable limits. The high-fidelity finite element model that answers this has 42,486 degrees of freedom and takes about **38 minutes** per run. A reduced-order model answers in **0.2 seconds** — around 11,000× faster, and that speedup is the only reason near-real-time monitoring is possible at all.
 
-I work on making such models report how far they should be trusted, and on making that report reliable enough to act on. Three problems, one commitment: put the uncertainty in the model's own structure, then calibrate it against the errors the model actually makes.
+It is also the problem. Reducing the model is what makes it fast, and reducing the model is what makes it wrong — in ways the model itself does not report. You are left with a fast, confident number and no way to know how far to trust it. That is the gap my work closes, for reduced-order models and, increasingly, for the pretrained foundation models now being used the same way.
 
 <figure class="rp-fig">
   <div class="rp-fig-scroll">
@@ -27,9 +27,9 @@ I work on making such models report how far they should be trusted, and on makin
 
 ### Model uncertainty in computational mechanics
 
-A reduced-order model is fast because it throws information away. Standard practice reports the prediction but not what was discarded, so the surrogate is least trustworthy exactly when it looks most confident — and the usual remedy, fitting a correction to the outputs, patches the symptom while leaving the cause in place.
+The usual remedy for reduction error is to fit a correction to the model's outputs. That patches the symptom and leaves the cause in place: the error originates in the basis the model was projected onto.
 
-I make the model's own structure uncertain instead: the reduced basis becomes a distribution over subspaces rather than one fixed choice. The error introduced by reducing the model then propagates through to the prediction rather than disappearing into it. **An engineer gets a predictive interval that accounts for the modeling decision, not just the measurement noise** — which is the interval that matters when the decision is whether a structure is safe.
+I make that basis uncertain instead — a distribution over subspaces rather than one fixed choice, first parametrically through probabilistic PCA, then nonparametrically through the bootstrap. The reduction error then propagates through to the prediction instead of disappearing into it. On the space structure this gives calibrated intervals on acceleration and velocity at the critical nodes, including at locations and quantities never observed during training. **The fast model still answers in 0.2 seconds, but it now says how far it can be trusted** — which is what the 38-minute model was really being consulted for.
 
 <p class="rp-key"><a href="https://doi.org/10.1007/s00466-025-02701-6">Stochastic Subspace via Probabilistic PCA</a>, <em>Computational Mechanics</em> · <a href="https://github.com/UQUH/SS_PPCA">code</a> — <a href="https://doi.org/10.1061/AJRUA6.RUENG-1948">Nonparametric Stochastic Subspaces via the Bootstrap</a>, <em>ASCE-ASME J. Risk Uncertainty Eng. Syst.</em> · <a href="https://github.com/UQUH/SS_Bootstrap">code</a></p>
 
@@ -51,9 +51,9 @@ I get calibrated uncertainty out of a model I am not allowed to touch, at infere
 
 ### Hyperparameter optimization in stochastic models
 
-Uncertainty-aware models have a practical problem: they must be tuned, and tuning them is what makes people abandon them. Every evaluation of a stochastic model is itself random, so the usual approach is to average that randomness away by sampling repeatedly — and the cost of doing so is what puts these methods out of reach for realistic problems.
+None of the above is usable if calibrating it costs more than the simulation it replaces. The stochastic models above carry a hyperparameter that has to be tuned, every evaluation of it is itself random, and the standard fix is to average that randomness away by sampling repeatedly — on a 42,486-DOF problem that is exactly the cost you were trying to avoid.
 
-I treat the objective's own uncertainty as part of the objective rather than as noise to be suppressed. **The same parameter is reached with 40× fewer evaluations than scalar bounded optimization and 15× fewer than standard Gaussian-process Bayesian optimization** — the difference between a method that works in a paper and one that runs inside somebody's workflow.
+I treat the objective's own uncertainty as part of the objective rather than as noise to suppress. **The same parameter is reached with 40× fewer evaluations than scalar bounded optimization and 15× fewer than standard Gaussian-process Bayesian optimization** — the difference between a method that works in a paper and one that runs inside somebody's workflow.
 
 <p class="rp-key"><a href="https://doi.org/10.1061/AJRUA6.RUENG-1854">Bayesian Optimization under Uncertainty for Training a Scale Parameter in Stochastic Models</a> · <a href="https://github.com/UQUH/SO-BO-scale">code</a></p>
 
