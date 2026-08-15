@@ -151,8 +151,14 @@ social:
 
 
 # Analytics
+# Analytics is off. Leave `provider` blank to keep it off: a blank value is falsy
+# in Liquid, whereas the string "false" is truthy and only appeared to disable it
+# (the case statement below matched nothing, so it silently did nothing).
+# To enable GA4: set provider to "google-analytics-4" and put the Measurement ID
+# (Admin -> Data Streams -> Measurement ID, format G-XXXXXXXXXX) in tracking_id.
+# Other valid providers: "google", "google-universal", "custom".
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               :
   google:
     tracking_id          :
 
