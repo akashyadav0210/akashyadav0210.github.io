@@ -20,3 +20,8 @@ LOCAL_WEBSITE_ROADMAP.md
 
 # local preview override
 _config_localpreview.yml
+
+# Unpublished drafts stay local. Jekyll never renders _drafts, but the repo is
+# public, so anything committed here is readable by anyone even though it 404s
+# on the site. Move a file to _posts/ when it is ready to be published.
+_drafts/
