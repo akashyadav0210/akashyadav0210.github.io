@@ -38,22 +38,29 @@ We made the fast model report its own reliability. Stochastic subspaces put the 
 </details>
 
 <details class="rp-proj" id="foundation-models" markdown="1">
-<summary><span class="rp-proj-title">Calibrated forecasting with scientific foundation models</span><span class="rp-proj-sub">Frozen pretrained backbones · uncertainty without retraining · evaluated on ClimaX</span></summary>
+<summary><span class="rp-proj-title">Calibrated forecasting with scientific foundation models</span><span class="rp-proj-sub">Frozen pretrained backbones · calibrated uncertainty in 3 minutes, not days of GPU time · NeurIPS 2026</span></summary>
 
 <div class="rp-proj-body" markdown="1">
 
-Pretrained foundation models are being adopted as general-purpose surrogates for weather and climate. ClimaX is one of them: a transformer trained on atmospheric data that produces forecasts far faster than numerical weather prediction, and produces them as single deterministic fields. A forecast without a credible spread cannot support a decision that depends on how bad the tail might be.
+Pretrained transformers are being adopted as general-purpose surrogates for weather and climate. ClimaX is one of them: trained on atmospheric data, far faster than numerical weather prediction, and it returns a single deterministic field. A forecast with no credible spread cannot support a decision that turns on how bad the tail might be.
+
+The standard remedies retrain the backbone, at 14 hours to 12 days of GPU time. Most groups using these models cannot do that. The weights come from someone else and the compute is not there.
+
+We leave every weight untouched. Attention already computes an expectation over the softmax weights, so drawing a few samples from those same weights and averaging them turns a frozen backbone into an ensemble. One parameter sets the spread, and it is tuned so the spread matches the error the model actually makes.
 
 <figure class="rp-fig">
-  <img src="{{ base_path }}/images/projects/foundation-model-calibration.png" alt="Panel a: ERA5 geopotential ground truth, the ClimaX 72-hour forecast, and the bias between them shown as global maps, with structured regional error. Panel b: axes for accuracy, sharpness and calibration, with cost pointing downward. Panel c: four schematic predictive bands illustrating that a model can be calibrated but not accurate, accurate but not sharp, accurate and sharp but not calibrated, or all three at once.">
-  <figcaption>A 72-hour ClimaX forecast against ERA5, and the bias between them. The bias is structured, not random, which is what makes a single deterministic field inadequate and what a predictive interval has to account for. Accuracy, sharpness and calibration are separate properties: a model can have any two without the third.</figcaption>
+  <img src="{{ base_path }}/images/projects/stochastic-attention-mechanism.png" alt="Two rows comparing attention mechanisms. Deterministic attention multiplies the full softmax weight row by the value matrix, giving an expectation. Stochastic attention draws nu samples from the same weights, marked as red dots on the sampled cells, and averages the corresponding value vectors.">
+  <figcaption>Deterministic attention averages the value vectors against the whole softmax weight row. Stochastic attention draws a handful of samples from that same row instead. Nothing is retrained; the only new quantity is the number of samples.</figcaption>
 </figure>
 
-The groups using these models generally cannot retrain them. The weights come from someone else, the compute to fine-tune them is not available, and the target system may have no training data at all.
+Whether it works is a question about geography, not just about averages. The model should be uncertain in the places where it is actually wrong.
 
-We calibrate them from the outside. Resampling attention at inference turns a frozen backbone into a predictive ensemble whose spread tracks the errors it makes, with every pretrained weight untouched. Fine-tuned checkpoints work the same way, which matters because few groups deploy a foundation model straight out of the box.
+<figure class="rp-fig">
+  <img src="{{ base_path }}/images/projects/spread-error-agreement.png" alt="Two global maps side by side on the same colour scale. The left map shows the actual error of the ClimaX forecast, the right shows the spread predicted by stochastic attention. Both show low values across the tropics and high values in the mid and high latitudes of both hemispheres, and the two patterns are nearly identical.">
+  <figcaption>Where ClimaX is wrong on 500&nbsp;hPa geopotential at a 72-hour lead, and where our method says it is uncertain, over 17,376 forecasts. The two fields are the same map: cell by cell, <em>r</em> = 0.98.</figcaption>
+</figure>
 
-<p class="rp-key">Evaluated on pretrained atmospheric and time-series backbones. <a href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a> (under review)</p>
+<p class="rp-key">Sharpest intervals and lowest cost of the methods compared, with no post-hoc calibration step: 3 minutes of tuning against 14 hours to 12 days of retraining. Also evaluated on TimesFM and FT-Transformer. <a href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a>, NeurIPS 2026</p>
 
 </div>
 </details>

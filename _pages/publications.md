@@ -19,7 +19,7 @@ Also on my [Google Scholar profile](https://scholar.google.com/citations?user=d-
      <div class="authors"><strong>Akash Yadav</strong>, Taiwo A. Adebiyi, Ruda Zhang
      </div>
      <div>
-       <em>arXiv preprint, 2026. Under review.</em>
+       <em>Advances in Neural Information Processing Systems (NeurIPS), 2026.</em>
  <br>
  <br>
 

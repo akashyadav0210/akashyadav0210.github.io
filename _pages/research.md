@@ -41,7 +41,7 @@ Foundation models are becoming general-purpose surrogates for weather, climate a
 
 We get calibrated uncertainty out of a model we are not allowed to touch, at inference time, with every pretrained weight left exactly as it was. It applies to fine-tuned backbones as well as pretrained ones, which is what scientific workflows actually run on. **A group can adopt someone else's foundation model and still know when to believe it**, without a training budget of their own.
 
-<p class="rp-key">Applied to <a href="{{ base_path }}/projects/#foundation-models">calibrated weather forecasting</a> · <a href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a> (under review)</p>
+<p class="rp-key">Applied to <a href="{{ base_path }}/projects/#foundation-models">calibrated weather forecasting</a> · <a href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a>, NeurIPS 2026</p>
 
 </div>
 
