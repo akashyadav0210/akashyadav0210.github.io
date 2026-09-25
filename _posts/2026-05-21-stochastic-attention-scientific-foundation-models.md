@@ -28,6 +28,11 @@ Here is the observation the paper turns on. Softmax attention computes a weighte
 
 An expectation can be estimated by sampling. Draw &nu; positions from that same categorical distribution, average the value vectors you land on, and you have an unbiased estimate of what deterministic attention computes exactly. Do this at every attention layer and every forward pass returns a slightly different answer.
 
+<figure class="full">
+  <img src="/images/projects/stochastic-attention-mechanism.png" alt="Two rows comparing attention mechanisms. The top row, deterministic attention, multiplies the full softmax weight row by the value matrix to give an expectation. The bottom row, stochastic attention, draws nu samples from the same weight row, marked as red dots on the sampled cells, and averages the corresponding value vectors.">
+  <figcaption>The whole change, in one row. Deterministic attention (top) averages the value vectors against the entire softmax weight row. Stochastic attention (bottom) draws &nu; samples from that same row and averages those instead.</figcaption>
+</figure>
+
 Nothing has been retrained and nothing has been added to the architecture. The distribution being sampled is the one the trained model already produces and then averages away.
 
 ## One knob, tuned against the model's own errors
@@ -40,7 +45,7 @@ We choose it by matching dispersion to error. &nu; is set so that the spread the
 
 Calibration is usually reported as one aggregate number, which can hide a model that is uncertain by the right amount on average and uncertain in the wrong places. A sharper test is spatial. Take ClimaX at a 72-hour lead on 500 hPa geopotential, find where it is actually wrong across 17,376 forecasts, and compare that against where stochastic attention says it is unsure.
 
-<figure>
+<figure class="full">
   <img src="/images/projects/spread-error-agreement.png" alt="Two global maps side by side on the same colour scale. The left map shows the actual error of the ClimaX forecast, the right the spread predicted by stochastic attention. Both are low through the tropics and high in the mid and high latitudes of both hemispheres, and the two patterns are nearly identical.">
   <figcaption>Actual error and predicted spread, cell by cell, over 17,376 forecasts. The correlation is 0.98.</figcaption>
 </figure>
