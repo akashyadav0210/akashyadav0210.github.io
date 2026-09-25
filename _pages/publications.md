@@ -94,3 +94,21 @@ Also on my [Google Scholar profile](https://scholar.google.com/citations?user=d-
    </div>
  </div>
  <br>
+
+ <div class="publication">
+   <div class="img publication__img--spacer"></div>
+   <div class="text">
+     <div class="title"><a id="shm-bridges-chapter" href="https://doi.org/10.1007/978-981-96-9416-7_13">Structural Health Monitoring of Steel Truss Bridges Subjected to Environmental Variability</a></div>
+     <div class="authors"><strong>Akash Yadav</strong>, Ananth Ramaswamy
+     </div>
+     <div>
+       <em>Recent Trends in Computational Mechanics and Simulation</em>, Lecture Notes in Mechanical Engineering, Springer, 211&ndash;227, 2026.
+ <br>
+ <br>
+
+       <a class="btn btn--success btn--small" href="https://doi.org/10.1007/978-981-96-9416-7_13">Chapter</a>
+
+     </div>
+   </div>
+ </div>
+ <br>

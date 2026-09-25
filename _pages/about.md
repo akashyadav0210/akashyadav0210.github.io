@@ -21,10 +21,10 @@ Education
 ===========
 
 - **Ph.D. in Civil Engineering**, University of Houston, May 2027*  
-  Thesis: *Quantifying and Reducing Model Uncertainty using Stochastic Representations*  
+  Thesis: *Quantify and Reduce Model-error in Physics-based and Learned Models via Stochastic Representations*  
 
 - **M.Tech (Research) in Civil Engineering**, Indian Institute of Science, Bangalore, June 2023  
-  Thesis: *Structural Health Monitoring Accounting for Thermal Variability and Damage Using Approximate Bayesian Computation (ABC)*  
+  Thesis: *Structural Health Monitoring Accounting for Thermal Variability and Damage Using Approximate Bayesian Computation*  
 
 - **B.Tech in Civil Engineering**, Indian Institute of Technology, Roorkee, May 2018  
   Thesis: *Design of Hydro Power Project*  
