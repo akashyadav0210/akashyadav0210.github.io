@@ -10,42 +10,58 @@ tags:
   - forecasting
 ---
 
-Scientific foundation models are increasingly being used for forecasting, surrogate modeling, and large-scale scientific prediction. They are powerful because they can reuse representations across tasks and domains, but most of them still behave deterministically at inference time. For high-stakes scientific settings, that is a serious limitation.
+*Update, September 2026: this work has been accepted at NeurIPS 2026.*
 
-This motivation is central to my recent work on [Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention](https://arxiv.org/abs/2604.19530).
+Scientific foundation models are being handed jobs that used to belong to simulators. ClimaX produces atmospheric forecasts in seconds where numerical weather prediction needs hours on a supercomputer. TimesFM forecasts series it was never trained on. They are fast, reusable, and deterministic: you get one field, one trajectory, one number, and nothing at all about how much of it to believe.
 
-## Why Deterministic Scientific Foundation Models Are Not Enough
+That last part is the problem, because forecasts feed decisions and decisions usually turn on the tail.
 
-Deterministic models produce a single prediction, but scientific decisions often need more than a point estimate. In weather, climate, time-series forecasting, and engineering analysis, users need to know not only what the model predicts, but also how much confidence to place in that prediction.
+## The retraining tax
 
-This matters even more when models are deployed outside the exact conditions they were trained on. Distribution shift, limited observations, and imperfect modeling assumptions are routine in science. A deterministic output can hide all of that uncertainty behind a single number or trajectory.
+The established ways of putting uncertainty into a deep model all reach for the weights. SWAG and Multi-SWAG need an ensemble of training trajectories. IVON replaces the optimizer. Contextual dropout adds a learned dropout module. Each of them works, and each of them assumes you are in a position to retrain the backbone.
 
-## Attention as a Structured Place to Introduce Uncertainty
+On ClimaX that assumption costs between 14 hours and 12 days of GPU time. Most groups using a foundation model cannot pay it. The weights came from someone else, the training data may not be available, and the compute budget is what it is.
 
-One reason attention is so useful in foundation models is that it captures structured dependencies across tokens, time steps, or spatial regions. That same structure makes attention a natural place to introduce uncertainty.
+## Attention is already an average
 
-In stochastic attention, the goal is not to randomize the entire model indiscriminately. Instead, the idea is to inject controlled stochasticity into the attention mechanism so that repeated forward passes reflect uncertainty in how the model allocates influence across inputs. This creates a structured and efficient way to generate predictive variability.
+Here is the observation the paper turns on. Softmax attention computes a weighted average of value vectors with weights that sum to one, which makes it an expectation: the output is the mean of the value vectors under a categorical distribution over positions.
 
-An appealing aspect of this approach is that it can be post hoc. Rather than retraining the full model, one can modify the inference procedure and calibrate the resulting stochastic predictions afterward.
+An expectation can be estimated by sampling. Draw &nu; positions from that same categorical distribution, average the value vectors you land on, and you have an unbiased estimate of what deterministic attention computes exactly. Do this at every attention layer and every forward pass returns a slightly different answer.
 
-## Repeated Stochastic Inference
+Nothing has been retrained and nothing has been added to the architecture. The distribution being sampled is the one the trained model already produces and then averages away.
 
-Once attention is made stochastic, repeated inference becomes a practical way to obtain an ensemble of predictions. Each forward pass samples a slightly different attention pattern, and the collection of outputs reveals both central tendency and predictive spread.
+## One knob, tuned against the model's own errors
 
-This is useful because the ensemble is not coming from multiple separately trained models. It comes from one model with a stochastic inference mechanism layered on top. That makes the approach lighter than many traditional uncertainty-aware alternatives while still producing a distribution of possible predictions.
+Sampling produces spread, but arbitrary spread is not useful. The sample size &nu; controls it: small &nu; gives a wide, noisy ensemble, and as &nu; grows the estimate tightens back toward the deterministic output. So &nu; is the only parameter, and it alone decides how uncertain the model claims to be.
 
-## Calibration, Sharpness, and Scientific Reliability
+We choose it by matching dispersion to error. &nu; is set so that the spread the sampling induces is as close as possible to the residual error the model actually makes, searched with Bayesian optimization under uncertainty. On ClimaX that search takes about three minutes.
 
-Not all uncertainty estimates are equally useful. A model can be uncertain in a way that is too narrow, too wide, or simply misaligned with observed error. For scientific use, uncertainty should be calibrated: the predictive spread should meaningfully correspond to real discrepancies.
+## Does the uncertainty land in the right places
 
-At the same time, calibration alone is not enough. Useful uncertainty estimates should also remain sharp. Very wide intervals may look safe, but they are often not actionable. The real challenge is to balance calibration with sharpness so that the model is both honest and informative.
+Calibration is usually reported as one aggregate number, which can hide a model that is uncertain by the right amount on average and uncertain in the wrong places. A sharper test is spatial. Take ClimaX at a 72-hour lead on 500 hPa geopotential, find where it is actually wrong across 17,376 forecasts, and compare that against where stochastic attention says it is unsure.
 
-This is where stochastic attention becomes especially interesting. It offers a structured mechanism for producing ensembles while preserving the efficiency and representational strength of transformer-based scientific models.
+<figure>
+  <img src="/images/projects/spread-error-agreement.png" alt="Two global maps side by side on the same colour scale. The left map shows the actual error of the ClimaX forecast, the right the spread predicted by stochastic attention. Both are low through the tropics and high in the mid and high latitudes of both hemispheres, and the two patterns are nearly identical.">
+  <figcaption>Actual error and predicted spread, cell by cell, over 17,376 forecasts. The correlation is 0.98.</figcaption>
+</figure>
 
-## Applications to Weather, Time-Series, and PDE-Style Models
+The two maps are the same map. Both are calm through the tropics and noisy in the mid and high latitudes of both hemispheres, and cell by cell the correlation is 0.98. The model is not uncertain in general. It is uncertain where it fails.
 
-The most immediate applications are in domains where foundation models are already being used at scale, such as weather prediction and time-series forecasting. These settings benefit directly from calibrated uncertainty because forecasts are often used to support downstream planning and operational decisions.
+## The numbers
 
-Looking ahead, the same ideas are promising for PDE-style models and broader scientific machine learning systems. As foundation-style modeling expands in computational mechanics and engineering science, uncertainty-aware inference will become increasingly important. A reusable scientific model is only truly useful if it remains reliable when the geometry changes, the parameters shift, or the governing conditions are only partially observed.
+On ClimaX, against SWAG, Multi-SWAG, IVON, contextual dropout and hierarchical stochastic attention, with every baseline temperature-scaled and ours carrying no post-hoc calibration stage at all:
 
-That is the broader motivation for this line of work: building scientific foundation models that are not only accurate, but trustworthy.
+- calibration error (W&#8321;) of 0.047, against 0.102 for the nearest baseline before its own post-hoc fit
+- 90% intervals 32% narrower than the next sharpest method
+- accuracy within 1.3% of the best baseline
+- three minutes of tuning, against 14 hours to 12 days of retraining
+
+None of this is specific to weather. On TimesFM across eight ETT configurations it gives the lowest mean calibration error, 0.037 against 0.044, and the lowest worst case. On FT-Transformer across eight UCI datasets it is best on six, and wins or ties 39 of 40 paired comparisons.
+
+## Why I find this interesting
+
+Not the method, which is simple. What stays with me is that the uncertainty was already in there. A trained transformer carries a distribution at every attention layer and then averages it out of existence, and that averaging is the only reason the model looks deterministic at all. Sampling it does not so much add uncertainty as stop throwing it away.
+
+It also makes this something a practitioner can use without asking anyone's permission. There is no retraining to negotiate and no architecture to modify. If you have the weights and can run a forward pass, you can run several.
+
+Paper: [Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention](https://arxiv.org/abs/2604.19530), with Taiwo A. Adebiyi and Ruda Zhang. NeurIPS 2026.
