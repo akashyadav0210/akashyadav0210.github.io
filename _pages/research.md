@@ -11,27 +11,15 @@ custom_css: research
 
 <p class="rp-lede">Building predictive models that know when they don't know.</p>
 
-Fast models are useful because they discard information, and dangerous for the same reason. A reduced-order model runs in a fraction of the time of the simulation it replaces; a pretrained foundation model emulates physics it was never shown. Both return a confident number, and neither reports how much of that number is an artifact of the shortcut that made it fast.
+Fast models are useful because they discard information, and dangerous for the same reason. A pretrained foundation model emulates physics it was never shown; a reduced-order model runs in a fraction of the time of the simulation it replaces. Both return a confident number, and neither reports how much of that number is an artifact of the shortcut that made it fast.
 
 Our work puts the uncertainty in the model's own structure rather than in a correction bolted onto its outputs, then calibrates it against the errors the model makes. See [Projects]({{ base_path }}/projects/) for the systems these methods were built for.
 
 <figure class="rp-fig">
   <div class="rp-fig-scroll">
-    <img src="{{ base_path }}/images/research/research-done.svg" alt="Three lines of completed work. Model uncertainty in computational mechanics, addressed with stochastic reduced-order models, giving model error you can propagate. Calibrating transformer-based scientific foundation models, addressed with inference-time stochastic attention, giving calibrated predictions with the backbone untouched. Hyperparameter optimization in stochastic models, addressed with Bayesian optimization under uncertainty, reaching the same answer in 40 times fewer runs.">
+    <img src="{{ base_path }}/images/research/research-done.svg" alt="Three lines of completed work. Calibrating transformer-based scientific foundation models, addressed with inference-time stochastic attention, giving calibrated predictions with the backbone untouched. Model uncertainty in computational mechanics, addressed with stochastic reduced-order models, giving model error you can propagate. Hyperparameter optimization in stochastic models, addressed with Bayesian optimization under uncertainty, reaching the same answer in 40 times fewer runs.">
   </div>
 </figure>
-
-<div class="rp-entry" markdown="1">
-
-### Model uncertainty in computational mechanics
-
-The usual remedy for reduction error is to fit a correction to the model's outputs. That patches the symptom and leaves the cause in place: the error originates in the basis the model was projected onto.
-
-We make that basis uncertain instead. It becomes a distribution over subspaces rather than one fixed choice: first parametrically through probabilistic PCA, then nonparametrically through the bootstrap, which drops the Gaussian assumption and works from the empirical distribution directly. The reduction error then propagates through to the prediction rather than disappearing into it, **including at locations and quantities never observed during training**.
-
-<p class="rp-key">Applied to <a href="{{ base_path }}/projects/#space-structure">shock response of a space structure</a> · <a href="https://doi.org/10.1007/s00466-025-02701-6">Stochastic Subspace via Probabilistic PCA</a>, <em>Computational Mechanics</em> · <a href="https://github.com/UQUH/SS_PPCA">code</a><br><a href="https://doi.org/10.1061/AJRUA6.RUENG-1948">Nonparametric Stochastic Subspaces via the Bootstrap</a>, <em>ASCE-ASME J. Risk Uncertainty Eng. Syst.</em> · <a href="https://github.com/UQUH/SS_Bootstrap">code</a></p>
-
-</div>
 
 <div class="rp-entry" markdown="1">
 
@@ -42,6 +30,18 @@ Foundation models are becoming general-purpose surrogates for weather, climate a
 We get calibrated uncertainty out of a model we are not allowed to touch, at inference time, with every pretrained weight left exactly as it was. It applies to fine-tuned backbones as well as pretrained ones, which is what scientific workflows actually run on. **A group can adopt someone else's foundation model and still know when to believe it**, without a training budget of their own.
 
 <p class="rp-key">Applied to <a href="{{ base_path }}/projects/#foundation-models">calibrated weather forecasting</a> · <a href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a>, NeurIPS 2026</p>
+
+</div>
+
+<div class="rp-entry" markdown="1">
+
+### Model uncertainty in computational mechanics
+
+The usual remedy for reduction error is to fit a correction to the model's outputs. That patches the symptom and leaves the cause in place: the error originates in the basis the model was projected onto.
+
+We make that basis uncertain instead. It becomes a distribution over subspaces rather than one fixed choice: first parametrically through probabilistic PCA, then nonparametrically through the bootstrap, which drops the Gaussian assumption and works from the empirical distribution directly. The reduction error then propagates through to the prediction rather than disappearing into it, **including at locations and quantities never observed during training**.
+
+<p class="rp-key">Applied to <a href="{{ base_path }}/projects/#space-structure">shock response of a space structure</a> · <a href="https://doi.org/10.1007/s00466-025-02701-6">Stochastic Subspace via Probabilistic PCA</a>, <em>Computational Mechanics</em> · <a href="https://github.com/UQUH/SS_PPCA">code</a><br><a href="https://doi.org/10.1061/AJRUA6.RUENG-1948">Nonparametric Stochastic Subspaces via the Bootstrap</a>, <em>ASCE-ASME J. Risk Uncertainty Eng. Syst.</em> · <a href="https://github.com/UQUH/SS_Bootstrap">code</a></p>
 
 </div>
 

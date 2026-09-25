@@ -11,33 +11,7 @@ custom_css: research
 
 <p class="rp-lede">The systems the methods were built for, and the decisions they have to support.</p>
 
-<details class="rp-proj" id="space-structure" open markdown="1">
-<summary><span class="rp-proj-title">Shock response of a space structure</span><span class="rp-proj-sub">42,486-DOF spacecraft component · 38 minutes → 0.2 seconds · calibrated intervals on shock response</span></summary>
-
-<div class="rp-proj-body" markdown="1">
-
-A component of a space structure takes an impulse load. A heavy central mass sits on rigid links above a cylindrical shell, and behind a shock-absorption block sits essential equipment. The question after the event is whether the acceleration that reached that equipment stayed within survivable limits, and it has to be answered from a handful of monitored points, close to real time.
-
-<figure class="rp-fig">
-  <img src="{{ base_path }}/images/projects/space-structure-system.png" alt="Left: the finite element model of the space structure component, showing the upper assembly, the cylindrical shell and the mounting pedestal. Right: the impulse force applied to the central mass, oscillating between plus and minus 2.5 times 10 to the 5 pound-force and decaying over roughly 75 milliseconds.">
-  <figcaption>The component as modelled, and the shock it has to survive: the impulse decays over about 75&nbsp;ms while exciting the full frequency content of the structure.</figcaption>
-</figure>
-
-The high-fidelity finite element model that answers it has **42,486 degrees of freedom** and takes about **38 minutes** per run. A reduced-order model answers in **0.2 seconds**, roughly 11,000× faster. That speedup is the only reason monitoring at this cadence is possible, and it is also what makes the answer untrustworthy: reducing the model discards the information needed to judge the result.
-
-We made the fast model report its own reliability. Stochastic subspaces put the reduction error back into the prediction as a calibrated interval on acceleration and velocity at the critical nodes, and at nodes the fitting never saw. Bayesian optimization under uncertainty makes the calibration affordable at this scale, so the whole thing stays cheaper than the simulation it replaces.
-
-<figure class="rp-fig">
-  <img src="{{ base_path }}/images/projects/space-structure-result.png" alt="Acceleration in X at a critical node over 75 milliseconds. The high-fidelity model is in black, the reduced-order model in dashed red, the stochastic reduced-order model mean in blue, and its 95 percent predictive interval as a shaded band. Three inset panels zoom into the early, middle and late response. The reduced model systematically understates the peaks, while the shaded interval covers the high-fidelity response.">
-  <figcaption>Acceleration at a critical node. The reduced model (red) misses the peaks that decide whether the equipment survives; the interval (shaded) covers the high-fidelity response (black) instead of hiding the gap, at 0.2&nbsp;s per evaluation rather than 38&nbsp;minutes.</figcaption>
-</figure>
-
-<p class="rp-key">Model built in LS-DYNA; transient response integrated with Newmark-β. <a href="https://doi.org/10.1007/s00466-025-02701-6">SS-PPCA</a> · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1948">SS-Bootstrap</a> · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1854">BO under uncertainty</a></p>
-
-</div>
-</details>
-
-<details class="rp-proj" id="foundation-models" markdown="1">
+<details class="rp-proj" id="foundation-models" open markdown="1">
 <summary><span class="rp-proj-title">Calibrated forecasting with scientific foundation models</span><span class="rp-proj-sub">Frozen pretrained backbones · calibrated uncertainty in 3 minutes, not days of GPU time · NeurIPS 2026</span></summary>
 
 <div class="rp-proj-body" markdown="1">
@@ -61,6 +35,32 @@ Whether it works is a question about geography, not just about averages. The mod
 </figure>
 
 <p class="rp-key">Sharpest intervals and lowest cost of the methods compared, with no post-hoc calibration step: 3 minutes of tuning against 14 hours to 12 days of retraining. Also evaluated on TimesFM and FT-Transformer. <a href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a>, NeurIPS 2026</p>
+
+</div>
+</details>
+
+<details class="rp-proj" id="space-structure" markdown="1">
+<summary><span class="rp-proj-title">Shock response of a space structure</span><span class="rp-proj-sub">42,486-DOF spacecraft component · 38 minutes → 0.2 seconds · calibrated intervals on shock response</span></summary>
+
+<div class="rp-proj-body" markdown="1">
+
+A component of a space structure takes an impulse load. A heavy central mass sits on rigid links above a cylindrical shell, and behind a shock-absorption block sits essential equipment. The question after the event is whether the acceleration that reached that equipment stayed within survivable limits, and it has to be answered from a handful of monitored points, close to real time.
+
+<figure class="rp-fig">
+  <img src="{{ base_path }}/images/projects/space-structure-system.png" alt="Left: the finite element model of the space structure component, showing the upper assembly, the cylindrical shell and the mounting pedestal. Right: the impulse force applied to the central mass, oscillating between plus and minus 2.5 times 10 to the 5 pound-force and decaying over roughly 75 milliseconds.">
+  <figcaption>The component as modelled, and the shock it has to survive: the impulse decays over about 75&nbsp;ms while exciting the full frequency content of the structure.</figcaption>
+</figure>
+
+The high-fidelity finite element model that answers it has **42,486 degrees of freedom** and takes about **38 minutes** per run. A reduced-order model answers in **0.2 seconds**, roughly 11,000× faster. That speedup is the only reason monitoring at this cadence is possible, and it is also what makes the answer untrustworthy: reducing the model discards the information needed to judge the result.
+
+We made the fast model report its own reliability. Stochastic subspaces put the reduction error back into the prediction as a calibrated interval on acceleration and velocity at the critical nodes, and at nodes the fitting never saw. Bayesian optimization under uncertainty makes the calibration affordable at this scale, so the whole thing stays cheaper than the simulation it replaces.
+
+<figure class="rp-fig">
+  <img src="{{ base_path }}/images/projects/space-structure-result.png" alt="Acceleration in X at a critical node over 75 milliseconds. The high-fidelity model is in black, the reduced-order model in dashed red, the stochastic reduced-order model mean in blue, and its 95 percent predictive interval as a shaded band. Three inset panels zoom into the early, middle and late response. The reduced model systematically understates the peaks, while the shaded interval covers the high-fidelity response.">
+  <figcaption>Acceleration at a critical node. The reduced model (red) misses the peaks that decide whether the equipment survives; the interval (shaded) covers the high-fidelity response (black) instead of hiding the gap, at 0.2&nbsp;s per evaluation rather than 38&nbsp;minutes.</figcaption>
+</figure>
+
+<p class="rp-key">Model built in LS-DYNA; transient response integrated with Newmark-β. <a href="https://doi.org/10.1007/s00466-025-02701-6">SS-PPCA</a> · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1948">SS-Bootstrap</a> · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1854">BO under uncertainty</a></p>
 
 </div>
 </details>

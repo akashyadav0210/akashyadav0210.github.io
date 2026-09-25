@@ -15,16 +15,16 @@
   arr/.style={-{Stealth[length=2.4mm]}, accent, thick},
   mid/.style={font=\footnotesize\itshape, text=accent, align=center, inner sep=2pt}]
 
-\node[src] (a1) {\textbf{Model uncertainty in}\\\textbf{computational mechanics}};
-\node[src, right=9mm of a1] (b1) {\textbf{Calibrating transformer-based}\\\textbf{scientific foundation models}};
+\node[src] (a1) {\textbf{Calibrating transformer-based}\\\textbf{scientific foundation models}};
+\node[src, right=9mm of a1] (b1) {\textbf{Model uncertainty in}\\\textbf{computational mechanics}};
 \node[src, right=9mm of b1] (c1) {\textbf{Hyperparameter optimization}\\\textbf{in stochastic models}};
 
-\node[res, below=20mm of a1] (a2) {\textbf{Model error you can propagate}\\[1pt]{\footnotesize SS-PPCA $\cdot$ SS-Bootstrap}};
-\node[res, below=20mm of b1] (b2) {\textbf{Calibrated predictions,}\\\textbf{backbone untouched}};
+\node[res, below=20mm of a1] (a2) {\textbf{Calibrated predictions,}\\\textbf{backbone untouched}};
+\node[res, below=20mm of b1] (b2) {\textbf{Model error you can propagate}\\[1pt]{\footnotesize SS-PPCA $\cdot$ SS-Bootstrap}};
 \node[res, below=20mm of c1] (c2) {\textbf{Same answer,}\\\textbf{$40\times$ fewer runs}};
 
-\draw[arr] (a1) -- node[mid, right=1mm]{stochastic\\ reduced-order models} (a2);
-\draw[arr] (b1) -- node[mid, right=1mm]{inference-time\\ stochastic attention} (b2);
+\draw[arr] (a1) -- node[mid, right=1mm]{inference-time\\ stochastic attention} (a2);
+\draw[arr] (b1) -- node[mid, right=1mm]{stochastic\\ reduced-order models} (b2);
 \draw[arr] (c1) -- node[mid, right=1mm]{Bayesian optimization\\ under uncertainty} (c2);
 
 \node[mid, above=4mm of b1, text width=150mm, font=\small\itshape]
