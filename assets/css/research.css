@@ -27,6 +27,15 @@
 .rp-fig-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .rp-fig-scroll img { min-width: 660px; }
 
+/* Explainer video. It is portrait (1080x1200), so cap the width instead of letting it
+   run the full column and push the text a screen down; the caption follows the cap. */
+/* The theme lays every figure out as a wrapping flex row; at a capped width the caption
+   would sit beside the video instead of under it. */
+.rp-video { display: block; }
+.rp-video video { display: block; width: 100%; max-width: 480px; height: auto;
+  margin: 0 auto; border-radius: 3px; background: #fafafa; }
+.rp-video figcaption { max-width: 480px; margin-left: auto; margin-right: auto; }
+
 /* ---- Collapsible project entries ---- */
 .rp-proj { border-top: 1px solid var(--global-border-color); margin: 0; }
 .rp-proj:last-of-type { border-bottom: 1px solid var(--global-border-color); }

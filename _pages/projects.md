@@ -16,16 +16,18 @@ custom_css: research
 
 <div class="rp-proj-body" markdown="1">
 
+<figure class="rp-fig rp-video">
+  <video src="{{ base_path }}/images/projects/sa-neurips2026.mp4" poster="{{ base_path }}/images/projects/sa-neurips2026-poster.jpg" width="1080" height="1200" autoplay loop muted playsinline controls aria-label="A 40-second animation. It compares a map of where a ClimaX weather forecast is wrong with a map of where stochastic attention says it is uncertain, and the two match. It then shows a frozen transformer returning one forecast, explains attention as a weighted average of values, replaces that average with a few random draws so each pass gives a new forecast, and ends with the one-time cost: 3 minutes for stochastic attention against 14 hours to 12 days for methods that retrain the network.">
+    <a href="{{ base_path }}/images/projects/sa-neurips2026.mp4">Watch the 40-second explainer</a>
+  </video>
+  <figcaption>The idea in 40 seconds. Sampling the attention weights of a frozen ClimaX turns one forecast into an ensemble, and the ensemble spreads out where the forecast is wrong.</figcaption>
+</figure>
+
 Pretrained transformers are being adopted as general-purpose surrogates for weather and climate. ClimaX is one of them: trained on atmospheric data, far faster than numerical weather prediction, and it returns a single deterministic field. A forecast with no credible spread cannot support a decision that turns on how bad the tail might be.
 
 The standard remedies retrain the backbone, at 14 hours to 12 days of GPU time. Most groups using these models cannot do that. The weights come from someone else and the compute is not there.
 
 We leave every weight untouched. Attention already computes an expectation over the softmax weights, so drawing a few samples from those same weights and averaging them turns a frozen backbone into an ensemble. One parameter sets the spread, and it is tuned so the spread matches the error the model actually makes.
-
-<figure class="rp-fig">
-  <img src="{{ base_path }}/images/projects/stochastic-attention-mechanism.png" alt="Two rows comparing attention mechanisms. Deterministic attention multiplies the full softmax weight row by the value matrix, giving an expectation. Stochastic attention draws nu samples from the same weights, marked as red dots on the sampled cells, and averages the corresponding value vectors.">
-  <figcaption>Deterministic attention averages the value vectors against the whole softmax weight row. Stochastic attention draws a handful of samples from that same row instead. Nothing is retrained; the only new quantity is the number of samples.</figcaption>
-</figure>
 
 Whether it works is a question about geography, not just about averages. The model should be uncertain in the places where it is actually wrong.
 
@@ -98,5 +100,16 @@ Methods behind these on the [Research]({{ base_path }}/research/) page · papers
   }
   window.addEventListener('hashchange', openTarget);
   openTarget();
+})();
+</script>
+
+<script>
+/* Skip autoplay for readers whose OS asks for reduced motion; the controls still play it.
+   Block comments only: compress_html strips newlines in production. */
+(function () {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var v = document.querySelectorAll('video[autoplay]');
+    for (var i = 0; i < v.length; i++) { v[i].removeAttribute('autoplay'); v[i].pause(); }
+  }
 })();
 </script>

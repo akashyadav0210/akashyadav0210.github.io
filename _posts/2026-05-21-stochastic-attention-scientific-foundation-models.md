@@ -12,6 +12,13 @@ tags:
 
 *Update, September 2026: this work has been accepted at NeurIPS 2026.*
 
+<figure style="display:block">
+  <video src="/images/projects/sa-neurips2026.mp4" poster="/images/projects/sa-neurips2026-poster.jpg" width="1080" height="1200" autoplay loop muted playsinline controls style="display:block;width:100%;max-width:480px;height:auto;margin:0 auto;border-radius:3px;background:#fafafa" aria-label="A 40-second animation. It compares a map of where a ClimaX weather forecast is wrong with a map of where stochastic attention says it is uncertain, and the two match. It then shows a frozen transformer returning one forecast, explains attention as a weighted average of values, replaces that average with a few random draws so each pass gives a new forecast, and ends with the one-time cost: 3 minutes for stochastic attention against 14 hours to 12 days for methods that retrain the network.">
+    <a href="/images/projects/sa-neurips2026.mp4">Watch the 40-second explainer</a>
+  </video>
+  <figcaption style="text-align:center;max-width:480px;margin:.6em auto 0">The 40-second version of this post.</figcaption>
+</figure>
+
 Scientific foundation models are being handed jobs that used to belong to simulators. ClimaX produces atmospheric forecasts in seconds where numerical weather prediction needs hours on a supercomputer. TimesFM forecasts series it was never trained on. They are fast, reusable, and deterministic: you get one field, one trajectory, one number, and nothing at all about how much of it to believe.
 
 That last part is the problem, because forecasts feed decisions and decisions usually turn on the tail.
@@ -70,3 +77,14 @@ Not the method, which is simple. What stays with me is that the uncertainty was 
 It also makes this something a practitioner can use without asking anyone's permission. There is no retraining to negotiate and no architecture to modify. If you have the weights and can run a forward pass, you can run several.
 
 Paper: [Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention](https://arxiv.org/abs/2604.19530), with Taiwo A. Adebiyi and Ruda Zhang. NeurIPS 2026.
+
+<script>
+/* Skip autoplay for readers whose OS asks for reduced motion; the controls still play it.
+   Block comments only: compress_html strips newlines in production. */
+(function () {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var v = document.querySelectorAll('video[autoplay]');
+    for (var i = 0; i < v.length; i++) { v[i].removeAttribute('autoplay'); v[i].pause(); }
+  }
+})();
+</script>
