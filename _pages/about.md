@@ -9,11 +9,9 @@ redirect_from:
 
 Hello! I am a Ph.D. candidate in the [Uncertainty Quantification Group](https://uq.uh.edu/) at the University of Houston, advised by [Dr. Ruda Zhang](https://www.cive.uh.edu/faculty/zhang-ruda).
 
-**I expect to complete my Ph.D. in May 2027 and am seeking postdoctoral positions or research-oriented industry roles in trustworthy scientific AI and uncertainty quantification, starting Summer/Fall 2027.** I am happy to talk with prospective hosts, collaborators and teams. Reach me by [email](mailto:ayadav4@uh.edu) or on [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).
+**I expect to complete my Ph.D. in May 2027 and am looking for postdoctoral positions or research-oriented industry roles starting Summer/Fall 2027.** My interests include AI for science, scientific foundation models, uncertainty quantification, probabilistic machine learning, reduced-order modeling and computational mechanics. I am happy to talk with prospective hosts, collaborators and teams. Reach me by [email](mailto:ayadav4@uh.edu) or on [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).
 
-My research builds predictive models that know when they don't know. Engineering decisions increasingly rest on models nobody can fully check: fast surrogates standing in for simulations too expensive to run, and pretrained foundation models emulating physics. They return a confident number whether or not they are still in a regime where they work. We make those models report how far they should be trusted, across model uncertainty in computational mechanics, calibration of scientific foundation models, and the optimization that makes both practical.
-
-I came to this from structural health monitoring, where a damage signal and a seasonal temperature swing look alike in the data. A monitoring system that cannot tell them apart reports a crack that is not there, and does it with complete confidence.
+My work is in AI for science and computational mechanics. I build and adapt models that stand in for expensive simulations, and much of my Ph.D. has been about knowing how far to trust them. For reduced-order models of structures, we put the model's own error back into its predictions and use Bayesian optimization to keep the tuning cheap. For pretrained foundation models in weather, time series and PDEs, we found a way to get calibrated uncertainty without retraining them, which will appear at NeurIPS 2026. More recently I led a small team that fine-tuned a vision-language model to diagnose damage from inspection photos, and we have started a project on monitoring underground CO₂ storage.
 
 See [Research](/research/) for the methods, [Projects](/projects/) for the systems they were built for, and [Publications](/publications/) for the papers.
 
@@ -41,5 +39,4 @@ Contact
 ---------
 :email: ayadav4 'at' uh 'dot' edu
 
-I am interested in collaborations on calibrated uncertainty for scientific foundation models, model-form uncertainty in computational mechanics, and decision-making under uncertainty. Please feel free to reach out by email. 
-You can also reach me via [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).
+Please feel free to reach out by email about collaborations, or find me on [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).
