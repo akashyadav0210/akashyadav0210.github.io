@@ -9,9 +9,7 @@ redirect_from:
 
 Hello! I am a Ph.D. candidate in the [Uncertainty Quantification Group](https://uq.uh.edu/) at the University of Houston, advised by [Dr. Ruda Zhang](https://www.cive.uh.edu/faculty/zhang-ruda).
 
-**I expect to complete my Ph.D. in May 2027 and am looking for postdoctoral positions or research-oriented industry roles starting Summer/Fall 2027.** My interests include AI for science, scientific foundation models, uncertainty quantification, probabilistic machine learning, reduced-order modeling and computational mechanics. I am happy to talk with prospective hosts, collaborators and teams. Reach me by [email](mailto:ayadav4@uh.edu) or on [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).
-
-My work is in AI for science and computational mechanics. I build and adapt models that stand in for expensive simulations, from reduced-order models of structures to large pretrained foundation models, and much of my Ph.D. has been about knowing how far to trust them.
+I work on AI for science and computational mechanics. Fast models, from reduced-order models of structures to large pretrained foundation models, now stand in for simulations that take hours or days to run, but they rarely tell you when their answers are off. My work makes them do that, cheaply enough to use in practice: our latest method calibrates a pretrained foundation model in minutes, without retraining it, and will appear at NeurIPS 2026. **I expect to complete my Ph.D. in May 2027 and am looking for postdoctoral positions or research-oriented industry roles starting Summer/Fall 2027.** My interests include AI for science, scientific foundation models, uncertainty quantification, probabilistic machine learning, reduced-order modeling and computational mechanics. I am happy to talk with prospective hosts, collaborators and teams; reach me by [email](mailto:ayadav4@uh.edu) or on [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).
 
 See [Research](/research/) for the methods, [Projects](/projects/) for the systems they were built for, and [Publications](/publications/) for the papers.
 
