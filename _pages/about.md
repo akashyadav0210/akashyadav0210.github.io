@@ -20,8 +20,7 @@ Education
 - **M.Tech (Research) in Civil Engineering**, Indian Institute of Science, Bangalore, June 2023  
   Thesis: *Structural Health Monitoring Accounting for Thermal Variability and Damage Using Approximate Bayesian Computation*  
 
-- **B.Tech in Civil Engineering**, Indian Institute of Technology, Roorkee, May 2018  
-  Thesis: *Design of Hydro Power Project*  
+- **B.Tech in Civil Engineering**, Indian Institute of Technology, Roorkee, May 2018
 
 
 News
