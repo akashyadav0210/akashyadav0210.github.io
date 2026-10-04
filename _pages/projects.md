@@ -64,7 +64,14 @@ The project has just started. We are working on open benchmarks first, and will 
 
 After an inspection, someone has to write down what damage each photo shows and what it looks like: a crack running left to right, or spalled concrete with the rebar showing. The 4th International Competition for Structural Health Monitoring (IC-SHM 2026) asked teams to automate that from about 1,200 annotated photos.
 
-I led a team of three, with Pranjal Chechani and Varsha Puklath from IISc. We fine-tuned a vision-language model (Qwen3-VL-8B) to name the damage and describe it, and had two simple image classifiers vote with it on the damage types, since the three tend to make different mistakes. On one photo of honeycombed concrete, the language model saw corrosion, exposed rebar and spalling. Both classifiers saw honeycomb, and the vote went with them.
+I led a team of three, with Pranjal Chechani and Varsha Puklath from IISc. We fine-tuned a vision-language model (Qwen3-VL-8B) to name the damage and describe it, and had two simple image classifiers vote with it on the damage types, since the three tend to make different mistakes.
+
+<figure class="rp-fig">
+  <img src="{{ base_path }}/images/projects/icshm-committee.png" alt="Flowchart of the system. The image goes to the fine-tuned vision-language model, which answers the first official question with a category sentence and the second with a description. Categories from both answers become the language model's vote. The image also goes to a frozen SigLIP2 embedding, from which a nearest-neighbour classifier and a logistic regression each cast a vote. A per-label majority of the three votes gives the damage categories, and the model's own generated sentence gives the description.">
+  <figcaption>How the three experts combine. The language model answers the competition's two questions (q<sub>1</sub>: which damage is visible; q<sub>2</sub>: what it looks like) and writes the description. On each damage type it votes with two classifiers that work on frozen image features, and a type is kept when at least two of the three report it.</figcaption>
+</figure>
+
+On one photo of honeycombed concrete, the language model saw corrosion, exposed rebar and spalling. Both classifiers saw honeycomb, and the vote went with them.
 
 What interested me most was what fine-tuning actually changed. Before it, the model often named damage in its own words instead of the task's categories. A small adapter fixed that, yet a nearest-neighbour classifier on an image encoder we never retrained recognised the damage types about as well. Fine-tuning mostly taught the model how the annotators talk.
 
