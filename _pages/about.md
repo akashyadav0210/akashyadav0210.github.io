@@ -11,7 +11,7 @@ Hello! I am a Ph.D. candidate in the [Uncertainty Quantification Group](https://
 
 **I expect to complete my Ph.D. in May 2027 and am looking for postdoctoral positions or research-oriented industry roles starting Summer/Fall 2027.** My interests include AI for science, scientific foundation models, uncertainty quantification, probabilistic machine learning, reduced-order modeling and computational mechanics. I am happy to talk with prospective hosts, collaborators and teams. Reach me by [email](mailto:ayadav4@uh.edu) or on [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).
 
-My work is in AI for science and computational mechanics. I build and adapt models that stand in for expensive simulations, and much of my Ph.D. has been about knowing how far to trust them. For reduced-order models of structures, we put the model's own error back into its predictions and use Bayesian optimization to keep the tuning cheap. For pretrained foundation models in weather, time series and PDEs, we found a way to get calibrated uncertainty without retraining them, which will appear at NeurIPS 2026. More recently I led a small team that fine-tuned a vision-language model to diagnose damage from inspection photos, and we have started a project on monitoring underground CO₂ storage.
+My work is in AI for science and computational mechanics. I build and adapt models that stand in for expensive simulations, from reduced-order models of structures to large pretrained foundation models, and much of my Ph.D. has been about knowing how far to trust them.
 
 See [Research](/research/) for the methods, [Projects](/projects/) for the systems they were built for, and [Publications](/publications/) for the papers.
 
