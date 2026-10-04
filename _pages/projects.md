@@ -41,6 +41,38 @@ Whether it works is a question about geography, not just about averages. The mod
 </div>
 </details>
 
+<details class="rp-proj" id="co2-storage" markdown="1">
+<summary><span class="rp-proj-title">Monitoring underground CO₂ storage</span><span class="rp-proj-sub">Ongoing · UH Chevron Energy Graduate Fellowship, 2026–2027</span></summary>
+
+<div class="rp-proj-body" markdown="1">
+
+Carbon storage puts CO₂ deep underground and is meant to keep it there for good. Regulators require years of monitoring afterwards, to track where the plume has moved and how far the pressure has spread. The measurements are sparse (a few wells and the occasional survey), so most of the picture has to come from models.
+
+Reservoir simulators are too slow to rerun every time new data comes in. AI surrogates are fast, but they were built to predict, and they say nothing about how far a prediction can be trusted. We are building fast models for this setting that also report how uncertain they are.
+
+The project has just started. We are working on open benchmarks first, and will shape the problem with input from engineers at Chevron.
+
+<p class="rp-key">With Dr. Ruda Zhang · <a href="https://uq.uh.edu/blog/akash-wins-chevron-fellowship">UQ group announcement</a></p>
+
+</div>
+</details>
+
+<details class="rp-proj" id="ic-shm" markdown="1">
+<summary><span class="rp-proj-title">Damage diagnosis from inspection photos</span><span class="rp-proj-sub">A vision-language model and two classifiers that vote · IC-SHM 2026 competition · team of three, UH and IISc</span></summary>
+
+<div class="rp-proj-body" markdown="1">
+
+After an inspection, someone has to write down what damage each photo shows and what it looks like: a crack running left to right, or spalled concrete with the rebar showing. The 4th International Competition for Structural Health Monitoring (IC-SHM 2026) asked teams to automate that from about 1,200 annotated photos.
+
+I led a team of three, with Pranjal Chechani and Varsha Puklath from IISc. We fine-tuned a vision-language model (Qwen3-VL-8B) to name the damage and describe it, and had two simple image classifiers vote with it on the damage types, since the three tend to make different mistakes. On one photo of honeycombed concrete, the language model saw corrosion, exposed rebar and spalling. Both classifiers saw honeycomb, and the vote went with them.
+
+What interested me most was what fine-tuning actually changed. Before it, the model often named damage in its own words instead of the task's categories. A small adapter fixed that, yet a nearest-neighbour classifier on an image encoder we never retrained recognised the damage types about as well. Fine-tuning mostly taught the model how the annotators talk.
+
+<p class="rp-key">Micro-F1 of 0.98 on our validation split; the organisers hold back the test labels. Report submitted September 2026.</p>
+
+</div>
+</details>
+
 <details class="rp-proj" id="space-structure" markdown="1">
 <summary><span class="rp-proj-title">Shock response of a space structure</span><span class="rp-proj-sub">42,486-DOF spacecraft component · 38 minutes → 0.2 seconds · calibrated intervals on shock response</span></summary>
 
