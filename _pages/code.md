@@ -44,7 +44,7 @@ The nonparametric counterpart: stochastic subspaces drawn from the empirical dat
 
 ### SO-BO-scale
 
-Bayesian optimization under uncertainty for tuning a scale parameter when every evaluation is noisy. Ships with GP and Monte Carlo baselines, state-of-the-art noisy-BO baselines, and a robustness study across seeds.
+Bayesian optimization under uncertainty for tuning a scale parameter when every evaluation is noisy. Includes GP and Monte Carlo baselines, state-of-the-art noisy-BO baselines, and a robustness study across seeds.
 
 <p class="rp-key">MATLAB R2023b or later · Python (numpy, scipy, matplotlib)</p>
 

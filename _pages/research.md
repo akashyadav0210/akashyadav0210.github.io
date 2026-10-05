@@ -56,7 +56,3 @@ We develop **Bayesian optimization methods that explicitly account for uncertain
 <p class="rp-key"><strong>Application:</strong> <a href="{{ base_path }}/projects/#space-structure">shock response of a space structure</a><br><strong>Paper:</strong> <a href="https://doi.org/10.1061/AJRUA6.RUENG-1854">Bayesian Optimization under Uncertainty for Training a Scale Parameter in Stochastic Models</a><br><strong>Code:</strong> <a href="https://github.com/UQUH/SO-BO-scale">GitHub</a></p>
 
 </div>
-
----
-
-[Projects]({{ base_path }}/projects/) · [Publications]({{ base_path }}/publications/) · [Code]({{ base_path }}/code/) · [Talks]({{ base_path }}/talks/)
