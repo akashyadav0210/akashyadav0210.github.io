@@ -34,7 +34,9 @@ A useful uncertainty estimate should be large where the model is wrong and small
   <figcaption>Actual error of ClimaX (left) and the uncertainty predicted by our method (right), for 500&nbsp;hPa geopotential at a 72-hour lead over 17,376 forecasts. Across grid cells, the correlation is 0.98.</figcaption>
 </figure>
 
-<p class="rp-key">Also evaluated on TimesFM and FT-Transformer. <a href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a>, NeurIPS 2026 · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1854">BO under uncertainty</a></p>
+We have also tested the method on TimesFM for time-series forecasting and on FT-Transformer for tabular regression.
+
+<p class="rp-key"><strong>Methods:</strong> <a href="{{ base_path }}/research/#uncertainty-calibration-for-scientific-foundation-models">stochastic attention</a> · <a href="{{ base_path }}/research/#efficient-calibration-of-stochastic-models">Bayesian optimization under uncertainty</a><br><strong>Papers:</strong> <a href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a> · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1854">Bayesian Optimization under Uncertainty for Training a Scale Parameter in Stochastic Models</a><br><strong>Code:</strong> coming soon<br><strong>Collaborators:</strong> Taiwo A. Adebiyi, Ruda Zhang</p>
 
 </div>
 </details>
@@ -50,7 +52,7 @@ Reservoir simulators are too slow to rerun every time new data comes in. AI surr
 
 The project has just started. We are working on open benchmarks first, and will shape the problem with input from engineers at Chevron.
 
-<p class="rp-key">With Dr. Ruda Zhang · <a href="https://uq.uh.edu/blog/akash-wins-chevron-fellowship">UQ group announcement</a></p>
+<p class="rp-key"><strong>Collaborators:</strong> Ruda Zhang<br><strong>Announcement:</strong> <a href="https://uq.uh.edu/blog/akash-wins-chevron-fellowship">UQ group blog</a></p>
 
 </div>
 </details>
@@ -62,7 +64,7 @@ The project has just started. We are working on open benchmarks first, and will 
 
 After an inspection, someone has to write down what damage each photo shows and what it looks like: a crack running left to right, or spalled concrete with the rebar showing. The 4th International Competition for Structural Health Monitoring (IC-SHM 2026) asked teams to automate that from about 1,200 annotated photos.
 
-I led a team of three, with Pranjal Chechani and Varsha Puklath from IISc. We fine-tuned a vision-language model (Qwen3-VL-8B) to name the damage and describe it, and had two simple image classifiers vote with it on the damage types, since the three tend to make different mistakes.
+I led a team of three from UH and IISc. We fine-tuned a vision-language model (Qwen3-VL-8B) to name the damage and describe it, and had two simple image classifiers vote with it on the damage types, since the three tend to make different mistakes.
 
 <figure class="rp-fig">
   <img src="{{ base_path }}/images/projects/icshm-committee.png" alt="Flowchart of the system. The image goes to the fine-tuned vision-language model, which answers the first official question with a category sentence and the second with a description. Categories from both answers become the language model's vote. The image also goes to a frozen SigLIP2 embedding, from which a nearest-neighbour classifier and a logistic regression each cast a vote. A per-label majority of the three votes gives the damage categories, and the model's own generated sentence gives the description.">
@@ -73,7 +75,9 @@ On one photo of honeycombed concrete, the language model saw corrosion, exposed 
 
 What interested me most was what fine-tuning actually changed. Before it, the model often named damage in its own words instead of the task's categories. A small adapter fixed that, yet a nearest-neighbour classifier on an image encoder we never retrained recognised the damage types about as well. Fine-tuning mostly taught the model how the annotators talk.
 
-<p class="rp-key">Micro-F1 of 0.98 on our validation split; the organisers hold back the test labels. Report submitted September 2026.</p>
+On our validation split the committee reached a micro-F1 of 0.98; the organisers hold back the test labels.
+
+<p class="rp-key"><strong>Report:</strong> An Expert Committee for Multi-Type Structural Damage Diagnosis (submitted September 2026)<br><strong>Collaborators:</strong> Pranjal Chechani, Varsha Puklath (IISc)</p>
 
 </div>
 </details>
@@ -90,7 +94,7 @@ We study a component of a space structure subjected to an impulse load. A heavy 
   <figcaption>Finite element model of the component (left) and the impulse load applied to the central mass, which decays over about 75&nbsp;ms (right).</figcaption>
 </figure>
 
-The high-fidelity finite element model has **42,486 degrees of freedom** and takes about **38 minutes** per run. A reduced-order model gives an answer in **0.2 seconds**, roughly 11,000× faster, which makes near real-time monitoring possible. The reduction, however, introduces errors that the reduced model does not report.
+The high-fidelity finite element model, built in LS-DYNA, has **42,486 degrees of freedom** and takes about **38 minutes** per run. A reduced-order model gives an answer in **0.2 seconds**, roughly 11,000× faster, which makes near real-time monitoring possible. The reduction, however, introduces errors that the reduced model does not report.
 
 Using stochastic subspaces, the reduced model also gives a calibrated prediction interval on acceleration and velocity at the critical nodes, including nodes not used in training. Bayesian optimization under uncertainty keeps the calibration affordable, so the approach remains much cheaper than running the full simulation.
 
@@ -99,7 +103,7 @@ Using stochastic subspaces, the reduced model also gives a calibrated prediction
   <figcaption>Acceleration at a critical node. The reduced model (red) underestimates the peaks, while the 95% prediction interval of the stochastic reduced model (shaded) covers the high-fidelity response (black).</figcaption>
 </figure>
 
-<p class="rp-key">Model built in LS-DYNA; transient response integrated with Newmark-β. <a href="https://doi.org/10.1007/s00466-025-02701-6">SS-PPCA</a> · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1948">SS-Bootstrap</a> · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1854">BO under uncertainty</a></p>
+<p class="rp-key"><strong>Methods:</strong> <a href="{{ base_path }}/research/#model-uncertainty-in-computational-mechanics">stochastic subspaces</a> · <a href="{{ base_path }}/research/#efficient-calibration-of-stochastic-models">Bayesian optimization under uncertainty</a><br><strong>Papers:</strong> <a href="https://doi.org/10.1007/s00466-025-02701-6">Stochastic Subspace via Probabilistic PCA</a> · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1948">Nonparametric Stochastic Subspaces via the Bootstrap</a> · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1854">Bayesian Optimization under Uncertainty for Training a Scale Parameter in Stochastic Models</a><br><strong>Code:</strong> <a href="https://github.com/UQUH/SS_PPCA">SS-PPCA</a> · <a href="https://github.com/UQUH/SS_Bootstrap">SS-Bootstrap</a> · <a href="https://github.com/UQUH/SO-BO-scale">SO-BO-scale</a><br><strong>Collaborators:</strong> Ruda Zhang</p>
 
 </div>
 </details>
@@ -113,7 +117,7 @@ Both damage and temperature change how a bridge vibrates, and the effect of temp
 
 We used approximate Bayesian computation to infer the damage state, modelling the effect of temperature directly instead of filtering it out as noise, and then extended the method to the nonlinear response caused by damage.
 
-<p class="rp-key">M.Tech (Research) thesis, Indian Institute of Science, with Dr. Ananth Ramaswamy. <a href="https://etd.iisc.ac.in/handle/2005/6115">Thesis</a> · <a href="https://github.com/akashyadav0210/ABC_SHM">code</a> · presented at ICCMS 2022, IIT Indore</p>
+<p class="rp-key"><strong>Thesis:</strong> <a href="https://etd.iisc.ac.in/handle/2005/6115">M.Tech (Research) thesis</a>, Indian Institute of Science<br><strong>Paper:</strong> <a href="https://doi.org/10.1007/978-981-96-9416-7_13">Structural Health Monitoring of Steel Truss Bridges Subjected to Environmental Variability</a><br><strong>Code:</strong> <a href="https://github.com/akashyadav0210/ABC_SHM">ABC_SHM</a><br><strong>Collaborators:</strong> Ananth Ramaswamy</p>
 
 </div>
 </details>
