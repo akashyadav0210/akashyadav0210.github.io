@@ -17,7 +17,7 @@ I develop methods to **represent, propagate, and calibrate this uncertainty**, w
 
 <figure class="rp-fig">
   <div class="rp-fig-scroll">
-    <img src="{{ base_path }}/images/research/research-done.svg" alt="Three lines of completed work. Uncertainty calibration for scientific foundation models, addressed with inference-time stochastic attention, giving calibrated predictions with the backbone untouched. Model uncertainty in computational mechanics, addressed with stochastic reduced-order models, giving model error you can propagate. Efficient calibration of stochastic models, addressed with Bayesian optimization under uncertainty, reaching the same answer in 40 times fewer runs.">
+    <img src="{{ base_path }}/images/research/research-framework.png" alt="Diagram of the research. A fast model, either physics-based (a reduced-order model, shown as a finite element mesh) or learned (a foundation model, shown as a global weather forecast), is made stochastic: stochastic subspaces for the reduced-order model and stochastic attention for the foundation model. Bayesian optimization under uncertainty then tunes the one scale parameter so that the spread matches the error. The result is a prediction with uncertainty: a prediction interval that covers the true response, and an uncertainty map that matches the actual error.">
   </div>
 </figure>
 
