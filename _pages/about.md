@@ -11,7 +11,7 @@ Hello! I am a Ph.D. candidate in the [Uncertainty Quantification Group](https://
 
 My research lies at the intersection of scientific **machine learning, uncertainty quantification, and computational mechanics**, with the goal of building trustworthy AI models. I am particularly interested in **scientific foundation models, probabilistic machine learning, and reduced-order modeling**.
 
-I expect to complete my Ph.D. in **May 2027** and am seeking **postdoctoral positions and research-oriented industry roles** beginning Summer/Fall 2027. I welcome conversations with prospective hosts, collaborators, and research teams; feel free to reach me by [email](mailto:ayadav4@uh.edu) or connect with me on [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).
+I expect to complete my Ph.D. in **May 2027** and am seeking **postdoctoral positions and research-oriented industry roles** beginning Summer/Fall 2027. I would be glad to hear from prospective hosts, collaborators, and research teams. Please feel free to reach out by [email](mailto:ayadav4@uh.edu) or connect with me on [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).
 
 Education
 ===========
