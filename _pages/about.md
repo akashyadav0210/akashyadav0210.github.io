@@ -14,13 +14,13 @@ My research is in AI for science, combining machine learning, uncertainty quanti
 Education
 ===========
 
-- **Ph.D. in Civil Engineering**, University of Houston, May 2027*  
+- **Ph.D. in Civil Engineering**, University of Houston, August 2023 – Present  
   Thesis: *Quantify and Reduce Model-error in Physics-based and Learned Models via Stochastic Representations*  
 
-- **M.Tech (Research) in Civil Engineering**, Indian Institute of Science, Bangalore, June 2023  
+- **M.Tech (Research) in Civil Engineering**, Indian Institute of Science, Bangalore, October 2020 – June 2023  
   Thesis: *Structural Health Monitoring Accounting for Thermal Variability and Damage Using Approximate Bayesian Computation*  
 
-- **B.Tech in Civil Engineering**, Indian Institute of Technology, Roorkee, May 2018
+- **B.Tech in Civil Engineering**, Indian Institute of Technology, Roorkee, July 2014 – May 2018
 
 
 News
