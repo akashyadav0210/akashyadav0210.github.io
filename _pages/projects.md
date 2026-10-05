@@ -9,7 +9,7 @@ custom_css: research
 
 {% include base_path %}
 
-<p class="rp-lede">Where our methods have been applied, and the projects we are working on now.</p>
+<p class="rp-lede">Applications of our work, from weather forecasting and carbon storage to structural monitoring.</p>
 
 <details class="rp-proj" id="foundation-models" open markdown="1">
 <summary><span class="rp-proj-title">Calibrated forecasting with scientific foundation models</span><span class="rp-proj-sub">Frozen pretrained backbones · calibrated uncertainty in 3 minutes, not days of GPU time · NeurIPS 2026</span></summary>
