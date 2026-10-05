@@ -29,7 +29,7 @@ Scientific foundation models are increasingly used as fast surrogates for weathe
 
 We develop **inference-time stochastic methods** that estimate and calibrate uncertainty while keeping the pretrained backbone unchanged. This enables uncertainty quantification for both pretrained and fine-tuned models without requiring an additional training cycle.
 
-<p class="rp-key"><strong>Application:</strong> <a href="{{ base_path }}/projects/#foundation-models">calibrated weather forecasting</a><br><strong>Paper:</strong> <a href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a></p>
+<p class="rp-key"><strong>Application:</strong> <a href="{{ base_path }}/projects/#foundation-models">calibrated weather forecasting</a><br><strong>Paper:</strong> <a href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a><br><strong>Code:</strong> coming soon</p>
 
 </div>
 
@@ -41,7 +41,7 @@ High-fidelity simulations carry model-form error from the simplifying assumption
 
 We instead make the **reduced basis itself uncertain**, representing it as a distribution over subspaces. We first developed this parametrically using probabilistic PCA and then nonparametrically using the bootstrap. The same stochastic model characterizes the error of the reduced-order model and, when experimental data are available, the error of the high-fidelity model itself, and propagates it naturally to model predictions.
 
-<p class="rp-key"><strong>Applications:</strong> <a href="{{ base_path }}/projects/#space-structure">shock response of a space structure</a><br><strong>Papers:</strong> <a href="https://doi.org/10.1007/s00466-025-02701-6">Stochastic Subspace via Probabilistic PCA</a> · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1948">Nonparametric Stochastic Subspaces via the Bootstrap</a><br><strong>Code:</strong> <a href="https://github.com/UQUH/SS_PPCA">probabilistic PCA</a> · <a href="https://github.com/UQUH/SS_Bootstrap">bootstrap</a></p>
+<p class="rp-key"><strong>Application:</strong> <a href="{{ base_path }}/projects/#space-structure">shock response of a space structure</a><br><strong>Papers:</strong> <a href="https://doi.org/10.1007/s00466-025-02701-6">Stochastic Subspace via Probabilistic PCA</a> · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1948">Nonparametric Stochastic Subspaces via the Bootstrap</a><br><strong>Code:</strong> <a href="https://github.com/UQUH/SS_PPCA">SS-PPCA</a> · <a href="https://github.com/UQUH/SS_Bootstrap">SS-Bootstrap</a></p>
 
 </div>
 
@@ -51,8 +51,8 @@ We instead make the **reduced basis itself uncertain**, representing it as a dis
 
 Introducing stochasticity creates another computational challenge: its hyperparameters must be calibrated, while each objective evaluation may itself be noisy.
 
-We develop **Bayesian optimization methods that explicitly account for uncertainty in the objective**, rather than suppressing it through repeated sampling. In our stochastic reduced-order modeling application, this approach reaches the same calibrated parameter with **40× fewer evaluations than scalar bounded optimization and 15× fewer than standard Gaussian-process Bayesian optimization**.
+We develop **Bayesian optimization methods that explicitly account for uncertainty in the objective**, rather than suppressing it through repeated sampling. In our stochastic reduced-order modeling application, this approach reaches the same calibrated parameter with **40× fewer evaluations than scalar bounded optimization and 15× fewer than standard Gaussian-process Bayesian optimization**. The same approach sets the sample size of stochastic attention when calibrating scientific foundation models.
 
-<p class="rp-key"><strong>Application:</strong> <a href="{{ base_path }}/projects/#space-structure">shock response of a space structure</a><br><strong>Paper:</strong> <a href="https://doi.org/10.1061/AJRUA6.RUENG-1854">Bayesian Optimization under Uncertainty for Training a Scale Parameter in Stochastic Models</a><br><strong>Code:</strong> <a href="https://github.com/UQUH/SO-BO-scale">GitHub</a></p>
+<p class="rp-key"><strong>Applications:</strong> <a href="{{ base_path }}/projects/#space-structure">shock response of a space structure</a> · <a href="{{ base_path }}/projects/#foundation-models">calibrated weather forecasting</a><br><strong>Paper:</strong> <a href="https://doi.org/10.1061/AJRUA6.RUENG-1854">Bayesian Optimization under Uncertainty for Training a Scale Parameter in Stochastic Models</a><br><strong>Code:</strong> <a href="https://github.com/UQUH/SO-BO-scale">SO-BO-scale</a></p>
 
 </div>

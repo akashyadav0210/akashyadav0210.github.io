@@ -34,7 +34,7 @@ A useful uncertainty estimate should be large where the model is wrong and small
   <figcaption>Actual error of ClimaX (left) and the uncertainty predicted by our method (right), for 500&nbsp;hPa geopotential at a 72-hour lead over 17,376 forecasts. Across grid cells, the correlation is 0.98.</figcaption>
 </figure>
 
-<p class="rp-key">Also evaluated on TimesFM and FT-Transformer. <a href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a>, NeurIPS 2026</p>
+<p class="rp-key">Also evaluated on TimesFM and FT-Transformer. <a href="https://arxiv.org/abs/2604.19530">Calibrating Scientific Foundation Models with Inference-Time Stochastic Attention</a>, NeurIPS 2026 · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1854">BO under uncertainty</a></p>
 
 </div>
 </details>
