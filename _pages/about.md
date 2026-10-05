@@ -17,7 +17,7 @@ Education
 ===========
 
 - **Ph.D. in Civil Engineering**, University of Houston, August 2023 – Present  
-  Thesis: *Quantify and Reduce Model-error in Physics-based and Learned Models via Stochastic Representations*  
+  Thesis: *Quantifying and Reducing Model Error in Physics-based and Learned Models via Stochastic Representations*  
 
 - **M.Tech (Research) in Civil Engineering**, Indian Institute of Science, Bangalore, October 2020 – June 2023  
   Thesis: *Structural Health Monitoring Accounting for Thermal Variability and Damage Using Approximate Bayesian Computation*  
@@ -35,5 +35,3 @@ News
 Contact
 ---------
 :email: ayadav4 'at' uh 'dot' edu
-
-Please feel free to reach out by email about collaborations, or find me on [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).
