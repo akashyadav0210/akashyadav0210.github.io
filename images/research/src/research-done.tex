@@ -9,18 +9,18 @@
 \begin{document}
 \begin{tikzpicture}[
   src/.style={draw=accent, rounded corners=2pt, align=center, font=\small,
-              inner sep=6pt, text width=45mm, minimum height=20mm},
+              inner sep=6pt, text width=55mm, minimum height=18mm},
   res/.style={draw=accent, thick, fill=accent!14, rounded corners=2pt, align=center,
-              font=\small, inner sep=6pt, text width=45mm, minimum height=20mm},
+              font=\small, inner sep=6pt, text width=55mm, minimum height=18mm},
   arr/.style={-{Stealth[length=2.4mm]}, accent, thick},
   mid/.style={font=\footnotesize\itshape, text=accent, align=center, inner sep=2pt}]
 
-\node[src] (a1) {\textbf{Uncertainty calibration}\\\textbf{for scientific}\\\textbf{foundation models}};
+\node[src] (a1) {\textbf{Uncertainty calibration for}\\\textbf{scientific foundation models}};
 \node[src, right=9mm of a1] (b1) {\textbf{Model uncertainty in}\\\textbf{computational mechanics}};
 \node[src, right=9mm of b1] (c1) {\textbf{Efficient calibration}\\\textbf{of stochastic models}};
 
 \node[res, below=20mm of a1] (a2) {\textbf{Calibrated predictions,}\\\textbf{backbone untouched}};
-\node[res, below=20mm of b1] (b2) {\textbf{Model error you can propagate}\\[1pt]{\footnotesize SS-PPCA $\cdot$ SS-Bootstrap}};
+\node[res, below=20mm of b1] (b2) {\textbf{Model error you}\\\textbf{can propagate}\\[1pt]{\footnotesize SS-PPCA $\cdot$ SS-Bootstrap}};
 \node[res, below=20mm of c1] (c2) {\textbf{Same answer,}\\\textbf{$40\times$ fewer runs}};
 
 \draw[arr] (a1) -- node[mid, right=1mm]{inference-time\\ stochastic attention} (a2);

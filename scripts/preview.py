@@ -13,8 +13,12 @@ This server sends an explicit charset on text assets, so what you see matches
 what will actually be published.
 
 Usage:
-    bundle exec jekyll build          # or: jekyll build --watch, in another shell
+    bundle exec jekyll build --config _config.yml,_config_localpreview.yml
     python3 scripts/preview.py        # -> http://127.0.0.1:4001
+
+The second config blanks site.url. Without it, base_path is the live site's
+address, so every image and stylesheet in the preview is fetched from GitHub
+Pages and new or edited figures silently show their published versions.
 """
 import functools
 import http.server

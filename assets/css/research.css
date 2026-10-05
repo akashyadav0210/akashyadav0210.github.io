@@ -24,8 +24,10 @@
 
 /* The schematic is wide; below ~700px let it keep a legible minimum width and
    scroll horizontally rather than shrinking into illegibility. */
-.rp-fig-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-.rp-fig-scroll img { min-width: 660px; }
+.rp-fig-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; }
+/* width: 100% above stops the theme's flex figure from shrinking the schematic to its
+   natural ~650px; the cap keeps its type close to the body text size, centred. */
+.rp-fig-scroll img { min-width: 660px; max-width: 920px; }
 
 /* Explainer video. It is portrait (1080x1200), so cap the width instead of letting it
    run the full column and push the text a screen down; the caption follows the cap. */
