@@ -9,7 +9,7 @@ redirect_from:
 
 Hello! I am a Ph.D. candidate in the [Uncertainty Quantification Group](https://uq.uh.edu/) at the University of Houston, advised by [Dr. Ruda Zhang](https://www.cive.uh.edu/faculty/zhang-ruda).
 
-My research is in AI for science, combining machine learning, uncertainty quantification and computational mechanics to build models that scientists and engineers can rely on. I am particularly interested in scientific foundation models, probabilistic machine learning and reduced-order modeling. **I expect to complete my Ph.D. in May 2027 and am looking for postdoctoral positions or research-oriented industry roles starting Summer/Fall 2027.** I am happy to talk with prospective hosts, collaborators and teams; reach me by [email](mailto:ayadav4@uh.edu) or on [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).
+My research combines machine learning, uncertainty quantification and computational mechanics to build AI models that scientists and engineers can rely on. I am particularly interested in scientific foundation models, probabilistic machine learning and reduced-order modeling. **I expect to complete my Ph.D. in May 2027 and am looking for postdoctoral positions or research-oriented industry roles starting Summer/Fall 2027.** I am happy to talk with prospective hosts, collaborators and teams; reach me by [email](mailto:ayadav4@uh.edu) or on [LinkedIn](https://www.linkedin.com/in/akash-yadav-018535112/).
 
 Education
 ===========
