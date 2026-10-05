@@ -17,7 +17,7 @@ I develop methods to **represent, propagate, and calibrate this uncertainty**, w
 
 <figure class="rp-fig">
   <div class="rp-fig-scroll">
-    <img src="{{ base_path }}/images/research/research-done.svg" alt="Three lines of completed work. Uncertainty calibration for scientific foundation models, addressed with inference-time stochastic attention, giving calibrated predictions with the backbone untouched. Model uncertainty in computational mechanics, addressed with stochastic reduced-order models, giving model error you can propagate. Efficient calibration of stochastic models, addressed with Bayesian optimization under uncertainty, reaching the same answer in 40 times fewer runs.">
+    <img src="{{ base_path }}/images/research/research-done.svg" alt="Three lines of completed work. Uncertainty calibration for scientific foundation models, addressed with inference-time stochastic attention, giving calibrated predictions with the backbone untouched. Model uncertainty in computational mechanics, addressed with stochastic subspaces, giving model error you can propagate. Efficient calibration of stochastic models, addressed with Bayesian optimization under uncertainty, reaching the same answer in 40 times fewer runs.">
   </div>
 </figure>
 
@@ -37,9 +37,9 @@ We develop **inference-time stochastic methods** that estimate and calibrate unc
 
 ### Model uncertainty in computational mechanics
 
-Reduced-order models accelerate high-fidelity simulations by projecting them onto a low-dimensional subspace. This reduction introduces approximation error that is typically ignored or corrected only at the model output.
+High-fidelity simulations carry model-form error from the simplifying assumptions behind them, and reduced-order models, which speed them up by projecting onto a low-dimensional subspace, add approximation error of their own. Both are typically ignored or corrected only at the model output.
 
-We instead make the **reduced basis itself uncertain**, representing it as a distribution over subspaces. We first developed this parametrically using probabilistic PCA and then nonparametrically using the bootstrap, allowing uncertainty in the reduced representation to propagate naturally to model predictions.
+We instead make the **reduced basis itself uncertain**, representing it as a distribution over subspaces. We first developed this parametrically using probabilistic PCA and then nonparametrically using the bootstrap. The same stochastic model characterizes the error of the reduced-order model and, when experimental data are available, the error of the high-fidelity model itself, and propagates it naturally to model predictions.
 
 <p class="rp-key"><strong>Applications:</strong> <a href="{{ base_path }}/projects/#space-structure">shock response of a space structure</a><br><strong>Papers:</strong> <a href="https://doi.org/10.1007/s00466-025-02701-6">Stochastic Subspace via Probabilistic PCA</a> · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1948">Nonparametric Stochastic Subspaces via the Bootstrap</a><br><strong>Code:</strong> <a href="https://github.com/UQUH/SS_PPCA">probabilistic PCA</a> · <a href="https://github.com/UQUH/SS_Bootstrap">bootstrap</a></p>
 
