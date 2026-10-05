@@ -39,7 +39,7 @@ We develop **inference-time stochastic methods** that estimate and calibrate unc
 
 High-fidelity simulations carry model-form error from the simplifying assumptions behind them, and reduced-order models, which speed them up by projecting onto a low-dimensional subspace, add approximation error of their own. Both are typically ignored or corrected only at the model output.
 
-We instead make the **reduced basis itself uncertain**, representing it as a distribution over subspaces. We first developed this parametrically using probabilistic PCA and then nonparametrically using the bootstrap. The same stochastic model characterizes the error of the reduced-order model and, when experimental data are available, the error of the high-fidelity model itself, and propagates it naturally to model predictions.
+We instead **randomize the reduced-order subspace**, representing it as a distribution over subspaces. We first developed this parametrically using probabilistic PCA and then nonparametrically using the bootstrap. The same stochastic model characterizes the error of the reduced-order model and, when experimental data are available, the error of the high-fidelity model itself, and propagates it naturally to model predictions.
 
 <p class="rp-key"><strong>Application:</strong> <a href="{{ base_path }}/projects/#space-structure">shock response of a space structure</a><br><strong>Papers:</strong> <a href="https://doi.org/10.1007/s00466-025-02701-6">Stochastic Subspace via Probabilistic PCA</a> · <a href="https://doi.org/10.1061/AJRUA6.RUENG-1948">Nonparametric Stochastic Subspaces via the Bootstrap</a><br><strong>Code:</strong> <a href="https://github.com/UQUH/SS_PPCA">SS-PPCA</a> · <a href="https://github.com/UQUH/SS_Bootstrap">SS-Bootstrap</a></p>
 
