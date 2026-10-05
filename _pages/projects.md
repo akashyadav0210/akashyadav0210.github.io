@@ -25,12 +25,12 @@ custom_css: research
 
 Pretrained transformers such as ClimaX are increasingly used as fast surrogates for weather and climate. They return a single deterministic forecast, with no indication of how far it can be trusted.
 
-Existing ways of adding uncertainty retrain the model, which on ClimaX takes 14 hours to 12 days of GPU time. We instead make the attention layers stochastic at inference time, so the frozen model produces an ensemble without any change to its weights. A single parameter sets the spread, and we tune it in about 3 minutes so that the spread matches the model's actual errors.
+Existing ways of adding uncertainty retrain the model, which on ClimaX takes 14 hours to 12 days of GPU time. We instead make the attention layers stochastic at inference time, so the frozen model produces an ensemble without any change to its weights. A single parameter sets the spread, and we tune it with Bayesian optimization under uncertainty in about 3 minutes, so that the spread matches the model's actual errors.
 
 A useful uncertainty estimate should be large where the model is wrong and small where it is right. On ClimaX the two patterns closely match.
 
 <figure class="rp-fig">
-  <img src="{{ base_path }}/images/projects/spread-error-agreement.png" alt="Two global maps side by side on the same colour scale. The left map shows the actual error of the ClimaX forecast, the right shows the spread predicted by stochastic attention. Both show low values across the tropics and high values in the mid and high latitudes of both hemispheres, and the two patterns are nearly identical.">
+  <img src="{{ base_path }}/images/projects/spread-error-agreement.png" alt="Two global maps side by side on the same color scale. The left map shows the actual error of the ClimaX forecast, the right shows the spread predicted by stochastic attention. Both show low values across the tropics and high values in the mid and high latitudes of both hemispheres, and the two patterns are nearly identical.">
   <figcaption>Actual error of ClimaX (left) and the uncertainty predicted by our method (right), for 500&nbsp;hPa geopotential at a 72-hour lead over 17,376 forecasts. Across grid cells, the correlation is 0.98.</figcaption>
 </figure>
 
@@ -67,15 +67,15 @@ After an inspection, someone has to write down what damage each photo shows and 
 We fine-tuned a vision-language model (Qwen3-VL-8B) to name the damage and describe it, and had two simple image classifiers vote with it on the damage types, since the three tend to make different mistakes.
 
 <figure class="rp-fig">
-  <img src="{{ base_path }}/images/projects/icshm-committee.png" alt="Flowchart of the system. The image goes to the fine-tuned vision-language model, which answers the first official question with a category sentence and the second with a description. Categories from both answers become the language model's vote. The image also goes to a frozen SigLIP2 embedding, from which a nearest-neighbour classifier and a logistic regression each cast a vote. A per-label majority of the three votes gives the damage categories, and the model's own generated sentence gives the description.">
+  <img src="{{ base_path }}/images/projects/icshm-committee.png" alt="Flowchart of the system. The image goes to the fine-tuned vision-language model, which answers the first official question with a category sentence and the second with a description. Categories from both answers become the language model's vote. The image also goes to a frozen SigLIP2 embedding, from which a nearest-neighbor classifier and a logistic regression each cast a vote. A per-label majority of the three votes gives the damage categories, and the model's own generated sentence gives the description.">
   <figcaption>How the three experts combine. The language model answers the competition's two questions (q<sub>1</sub>: which damage is visible; q<sub>2</sub>: what it looks like) and writes the description. On each damage type it votes with two classifiers that work on frozen image features, and a type is kept when at least two of the three report it.</figcaption>
 </figure>
 
 On one photo of honeycombed concrete, the language model saw corrosion, exposed rebar and spalling. Both classifiers saw honeycomb, and the vote went with them.
 
-What interested me most was what fine-tuning actually changed. Before it, the model often named damage in its own words instead of the task's categories. A small adapter fixed that, yet a nearest-neighbour classifier on an image encoder we never retrained recognised the damage types about as well. Fine-tuning mostly taught the model how the annotators talk.
+We also looked at what fine-tuning actually changed. Before it, the model often named damage in its own words instead of the task's categories. A small adapter fixed that, yet a nearest-neighbor classifier on an image encoder we never retrained recognized the damage types about as well. Fine-tuning mostly taught the model how the annotators talk.
 
-On our validation split the committee reached a micro-F1 of 0.98; the organisers hold back the test labels.
+On our validation split the committee reached a micro-F1 of 0.98; the organizers hold back the test labels.
 
 <p class="rp-key"><strong>Report:</strong> An Expert Committee for Multi-Type Structural Damage Diagnosis (submitted September 2026)<br><strong>Collaborators:</strong> Pranjal Chechani, Varsha Puklath (IISc)</p>
 
@@ -115,7 +115,7 @@ Using stochastic subspaces, the reduced model also gives a calibrated prediction
 
 Both damage and temperature change how a bridge vibrates, and the effect of temperature can be larger than that of damage. A monitoring system has to separate the two, or it will raise false alarms or miss real damage. The likelihood for this inverse problem is not available in closed form.
 
-We used approximate Bayesian computation to infer the damage state, modelling the effect of temperature directly instead of filtering it out as noise, and then extended the method to the nonlinear response caused by damage.
+We used approximate Bayesian computation to infer the damage state, modeling the effect of temperature directly instead of filtering it out as noise, and then extended the method to the nonlinear response caused by damage.
 
 <p class="rp-key"><strong>Thesis:</strong> <a href="https://etd.iisc.ac.in/handle/2005/6115">M.Tech (Research) thesis</a>, Indian Institute of Science<br><strong>Paper:</strong> <a href="https://doi.org/10.1007/978-981-96-9416-7_13">Structural Health Monitoring of Steel Truss Bridges Subjected to Environmental Variability</a><br><strong>Code:</strong> <a href="https://github.com/akashyadav0210/ABC_SHM">ABC_SHM</a><br><strong>Collaborators:</strong> Ananth Ramaswamy</p>
 
